@@ -93,6 +93,13 @@ import Logo from "../../public/assets/verona.png";
                         >Contacto</a
                     >
                 </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 dark:text-white md:dark:hover:text-yellow-400 dark:hover:bg-gray-700 dark:hover:text-yellow-400 md:dark:hover:bg-transparent dark:border-gray-700"
+                        >Ofertas</a
+                    >
+                </li>
             </ul>
         </div>
     </div>
@@ -195,3 +202,21 @@ import Logo from "../../public/assets/verona.png";
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(
+            '[data-collapse-toggle="mega-menu-full"]',
+        );
+        const megaMenuDropdown = document.getElementById(
+            "mega-menu-full-dropdown",
+        );
+
+        menuButton.addEventListener("click", function () {
+            const isOpen = !megaMenuDropdown.classList.contains("hidden");
+            if (isOpen) {
+                megaMenuDropdown.classList.add("hidden");
+            }
+        });
+    });
+</script>

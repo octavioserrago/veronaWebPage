@@ -6,10 +6,11 @@ interface Props {
 const { title } = Astro.props;
 
 import Navbar from "../components/Navbar.astro";
+import Banner from "../components/Banner.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -20,6 +21,7 @@ import Navbar from "../components/Navbar.astro";
 	</head>
 	<body>
 		<Navbar />
+		<Banner />
 		<script
 			is:inline
 			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
