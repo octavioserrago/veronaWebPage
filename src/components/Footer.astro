@@ -24,13 +24,17 @@ import Logo from "../../public/assets/verona.jpg";
                 </li>
             </template>
         </ul>
-        <div class="mt-8 items-center justify-between sm:flex">
-            <div class="mt-6 sm:mt-0">Desarrollado por Octavio Serrago</div>
+        <div class="flex items-center justify-center mt-6 sm:mt-0">
+            <RedesFooter />
+        </div>
+        <div class="mt-8 items-center justify-center sm:flex">
             <div class="mt-6 sm:mt-0">
                 2024 • &copy; Marmolería Verona • Todos los derechos reservados
             </div>
+        </div>
+        <div class="items-center justify-center sm:flex">
             <div class="mt-6 sm:mt-0">
-                <RedesFooter />
+                Diseño y desarrollo por Octavio Serrago
             </div>
         </div>
     </footer>
@@ -42,31 +46,3 @@ import Logo from "../../public/assets/verona.jpg";
         fill: currentColor;
     }
 </style>
-<script>
-    function footerComponent() {
-        return {
-            footerNavs: [
-                {
-                    href: "javascript:void()",
-                    name: "About",
-                },
-                {
-                    href: "javascript:void()",
-                    name: "Blog",
-                },
-                {
-                    href: "javascript:void()",
-                    name: "Team",
-                },
-                {
-                    href: "javascript:void()",
-                    name: "Careers",
-                },
-                {
-                    href: "javascript:void()",
-                    name: "Support",
-                },
-            ],
-        };
-    }
-</script>
