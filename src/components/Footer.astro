@@ -1,0 +1,72 @@
+---
+import RedesFooter from "./Redes-footer.astro";
+import Logo from "../../public/assets/verona.jpg";
+---
+
+<div x-data="footerComponent()">
+    <footer
+        class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8"
+    >
+        <div class="max-w-lg sm:mx-auto sm:text-center">
+            <img src={Logo.src} alt="Verona Logo" id="logo" />
+            <p class="leading-relaxed mt-2 text-[15px]">
+                Siempre bienvenidos a nuestra marmolería, donde su satisfacción
+                es nuestra prioridad. No dude en contactarnos para cualquier
+                consulta o requerimiento. ¡Estamos a su disposición!
+            </p>
+        </div>
+        <ul
+            class="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0"
+        >
+            <template x-for="(item, idx) in footerNavs" :key="idx">
+                <li class="hover:text-gray-800">
+                    <a :href="item.href" x-text="item.name"></a>
+                </li>
+            </template>
+        </ul>
+        <div class="mt-8 items-center justify-between sm:flex">
+            <div class="mt-6 sm:mt-0">Desarrollado por Octavio Serrago</div>
+            <div class="mt-6 sm:mt-0">
+                2024 • &copy; Marmolería Verona • Todos los derechos reservados
+            </div>
+            <div class="mt-6 sm:mt-0">
+                <RedesFooter />
+            </div>
+        </div>
+    </footer>
+</div>
+<style scoped>
+    .svg-icon path,
+    .svg-icon polygon,
+    .svg-icon rect {
+        fill: currentColor;
+    }
+</style>
+<script>
+    function footerComponent() {
+        return {
+            footerNavs: [
+                {
+                    href: "javascript:void()",
+                    name: "About",
+                },
+                {
+                    href: "javascript:void()",
+                    name: "Blog",
+                },
+                {
+                    href: "javascript:void()",
+                    name: "Team",
+                },
+                {
+                    href: "javascript:void()",
+                    name: "Careers",
+                },
+                {
+                    href: "javascript:void()",
+                    name: "Support",
+                },
+            ],
+        };
+    }
+</script>
