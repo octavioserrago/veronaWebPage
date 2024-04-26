@@ -1,5 +1,5 @@
 ---
-import Marble from "../../public/assets/Marble-Arabescato.png";
+import CarrouselCards from "./Carrousel-Cards.astro";
 ---
 
 <div
@@ -18,38 +18,8 @@ import Marble from "../../public/assets/Marble-Arabescato.png";
             </p>
         </a>
     </div>
-
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 w-full">
-        <a
-            class="mt-4 flex flex-col group overflow-hidden transition md:ml-40"
-            href="#"
-        >
-            <div
-                class="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden"
-            >
-                <img
-                    class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                    src={Marble.src}
-                    alt="Marmoles"
-                />
-            </div>
-            <div class="p-4 md:p-5">
-                <h3 class="text-lg font-bold text-gray-800">Mármoles</h3>
-                <p class="mt-1 text-gray-500">
-                    Descubre la elegancia de nuestros mármoles importados:
-                    mesadas de baño, bachas armadas y más proyectos a tu
-                    disposición. Embellece tus espacios con la calidad y
-                    distinción que solo el mármol puede ofrecer.
-                </p>
-                <a
-                    href="#"
-                    class="mt-2 inline-block px-4 py-2 bg-yellow-400 text-white rounded-lg hover:bg-yellow-600 transition-colors duration-300"
-                    >Ver Más</a
-                >
-            </div>
-        </a>
-    </div>
 </div>
+<CarrouselCards />
 
 <style>
     #title {
