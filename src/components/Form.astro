@@ -1,5 +1,8 @@
 <div class="bg-slate-50 h-fit w-dvw flex flex-col justify-start">
-    <h2 id="title" class="pt-4 ml-4 md:ml-40 mt-4 sm:mt-20 text-4xl">
+    <h2
+        id="title"
+        class="pt-4 ml-28 mt-4 text-4xl sm:ml-40 sm:mt-20 md:text-5xl"
+    >
         Contacto
     </h2>
     <div class="form w-6/12 mx-auto mb-8">
@@ -15,7 +18,7 @@
                     type="text"
                     id="nombre"
                     name="nombre"
-                    class="block w-full h-11 px-5 py-2.5 leading-7 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none"
+                    class="block w-full h-11 px-5 py-2.5 leading-7 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none"
                     placeholder="Nombre"
                     required
                 />
@@ -31,7 +34,7 @@
                     type="email"
                     id="email"
                     name="email"
-                    class="block w-full h-11 px-5 py-2.5 leading-7 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none"
+                    class="block w-full h-11 px-5 py-2.5 leading-7 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none"
                     placeholder="ejemplo@gmail.com"
                     required
                 />
@@ -48,15 +51,15 @@
                         <textarea
                             id="mensaje"
                             name="mensaje"
-                            class="block w-full h-40 px-4 py-2.5 text-base leading-7 font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-2xl placeholder-gray-400 focus:outline-none resize-none"
+                            class="block w-full h-40 px-4 py-2.5 text-base leading-7 font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none resize-none"
                             placeholder="Ingrese su Mensaje..."></textarea>
                     </div>
                 </div>
-                <div class="relative mb-6">
+                <div class="relative mb-2">
                     <button
                         id="upload-button"
                         type="button"
-                        class="block w-6/12 h-11 px-5 py-2.5 leading-7 text-base font-normal shadow-xs text-gray-700 bg-gray-200 border border-gray-300 rounded-full hover:bg-slate-400 hover:text-slate-50 transition-all duration-700"
+                        class="block w-fit h-8 px-5 leading-7 text-base font-normal shadow-xs text-gray-700 bg-gray-200 border border-gray-300 rounded-lg hover:bg-slate-400 hover:text-slate-50 transition-all duration-700 lg:w-3/12"
                         onclick="document.getElementById('file-upload').click();"
                     >
                         Subir Archivo
@@ -71,13 +74,14 @@
 
                     <span id="file-name" class="ml-2 text-gray-900"></span>
                 </div>
-                <div id="feedback" class="text-green-600 ml-4"></div>
+                <div id="feedback" class="text-green-600"></div>
             </div>
             <button
                 type="submit"
-                class="w-6/12 h-12 bg-yellow-400 hover:bg-yellow-600 transition-all duration-700 rounded-full shadow-xs text-white text-base font-semibold leading-6"
-                >Enviar Mensaje</button
+                class="w-fit h-8 px-5 sm:w-6/12 lg:w-3/12 bg-yellow-400 hover:bg-yellow-600 transition-all duration-700 rounded-lg shadow-xs text-white text-base font-semibold leading-6"
             >
+                Enviar Mensaje
+            </button>
         </form>
     </div>
 </div>
@@ -103,5 +107,11 @@
 <style>
     #title {
         font-family: "San Francisco Display Semibold";
+    }
+
+    @media (min-width: 1024px) {
+        #title {
+            margin-left: 25%;
+        }
     }
 </style>
