@@ -3,29 +3,17 @@ import CarrouselCards from "./Carrousel-Cards.astro";
 ---
 
 <div
-    class="products-section bg-slate-50 h-fit w-dvw flex flex-col md:flex-row justify-start items-start flex-wrap"
+    class="products-section bg-slate-50 h-fit w-dvw flex flex-col justify-start items-start"
 >
-    <h2 id="title" class="pt-4 ml-4 md:ml-40 sm:mt-20 text-4xl">
-        Nuestros materiales
+    <h2 id="title" class="pt-4 ml-12 sm:ml-28 md:ml-12 lg:ml-28 text-4xl">
+        Nuestros Materiales
     </h2>
-    <div
-        class="linkMasMateriales mt-4 md:mt-0 md:ml-auto ml-4 sm:text-right md:mr-4 lg:mr-44 md:mt-28"
-    >
-        <a href="">
-            <p id="texto" class="hover:underline text-yellow-500">
-                Ver todos los productos <i
-                    class="fa-solid fa-chevron-right hover:none pl-1"></i>
-            </p>
-        </a>
-    </div>
 </div>
+
 <CarrouselCards />
 
 <style>
     #title {
         font-family: "San Francisco Display Semibold";
-    }
-    #texto {
-        font-family: "San Francisco Display Ultralight";
     }
 </style>
