@@ -6,12 +6,16 @@ import Layout from "../layouts/Layout.astro";
 import ProductsSection from "../components/Products-Section.astro";
 import Form from "../components/Form.astro";
 import FAQ from "../components/FAQ.astro";
+import CarrouselCards from "../components/Carrousel-Cards.astro";
+import Landing from "../components/Landing.astro";
 ---
 
 <Layout title="Marmoleria Verona">
 	<Navbar />
+	<Landing />
 	<main>
 		<ProductsSection />
+		<CarrouselCards />
 		<Banner />
 		<Form />
 		<FAQ />

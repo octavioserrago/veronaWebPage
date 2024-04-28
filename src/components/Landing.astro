@@ -1,0 +1,35 @@
+---
+import img from "../../public/assets/Landing01.png";
+---
+
+<div class="Landing w-full h-screen flex flex-col items-center">
+    <h1 class="text-5xl text-white text-center mt-8 font-bold" id="mainTitle">
+        Marmoleria Verona
+    </h1>
+    <p class="subtitle text-center text-white mt-4 font-normal text-4xl">
+        Transformando espacios
+    </p>
+    <p class="subtitle text-center text-white font-normal text-4xl">
+        Dando vida a tus proyectos
+    </p>
+    <button
+        class="mt-4 px-4 py-2 rounded-full border border-white text-white bg-black hover:bg-yellow-500 transition-colors duration-50 ease-in-out"
+    >
+        Contáctanos
+    </button>
+</div>
+
+<style>
+    .subtitle {
+        font-family: "San Francisco Display Ultralight";
+    }
+    #mainTitle {
+        font-family: "San Francisco Display Semibold";
+    }
+    .Landing {
+        background-image: url("/assets/Landing01.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
