@@ -1,24 +1,66 @@
 ---
-import Navbar from "../components/Navbar.astro";
-import Banner from "../components/Banner.astro";
-import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
-import ProductsSection from "../components/Products-Section.astro";
-import Form from "../components/Form.astro";
-import FAQ from "../components/FAQ.astro";
-import CarrouselCards from "../components/Carrousel-Cards.astro";
+import Navbar from "../components/Navbar.astro";
 import Landing from "../components/Landing.astro";
+import ProductSection from "../components/ProductSection.astro";
+import ProductCard from "../components/ProductCard.astro";
+import Granite from "../../public/assets/Granite-Block.png";
+import Marble from "../../public/assets/Marble-Block.png";
+import Purastone from "../../public/assets/Purastone-Block.png";
+import Silestone from "../../public/assets/Silestone-Block.png";
+import Banner from "../components/Banner.astro";
+import FAQ from "../components/FAQ.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Marmoleria Verona">
-	<Navbar />
-	<Landing />
 	<main>
-		<ProductsSection />
-		<CarrouselCards />
+		<Navbar />
+		<Landing />
+		<ProductSection />
+		<div
+			class="relative bg-slate-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-8 lg:pb-28 w-dvw"
+		>
+			<div class="absolute inset-0">
+				<div class="h-1/3 bg-slate-50 sm:h-1/3"></div>
+			</div>
+			<div class="relative mx-auto max-w-7xl">
+				<div
+					class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3"
+				>
+					<ProductCard
+						linkImagen={Granite.src}
+						altImagen="Bloque Granitos"
+						href="#"
+						title="Granitos"
+						body="Explora la autenticidad y resistencia de nuestros granitos. Sumérgete en una variedad de colores y patrones que reflejan la belleza única de la naturaleza."
+					/>
+					<ProductCard
+						linkImagen={Marble.src}
+						altImagen="Bloque Mármoles"
+						href="#"
+						title="Granitos"
+						body="Descubre la elegancia atemporal de nuestros mármoles. Explora una exclusiva selección de materiales Importados que realzará cualquier espacio."
+					/>
+					<ProductCard
+						linkImagen={Purastone.src}
+						altImagen="Bloque Purastone"
+						href="#"
+						title="Purastone"
+						body="Una elección premium en superficies de cuarzo. Fácil de limpiar y perfecta para cocinas, baños y aplicaciones comerciales. La combinación ideal de belleza y durabilidad para tu espacio."
+					/>
+					<ProductCard
+						linkImagen={Silestone.src}
+						altImagen="Bloque Silestone"
+						href="#"
+						title="Silestone"
+						body="La perfecta fusión entre belleza y resistencia, gracias a la innovadora tecnología HybriQ. Experimenta una amplia gama de colores que elevan tus espacios a nuevas alturas, ofreciendo una superficie impecablemente bella y duradera."
+					/>
+				</div>
+			</div>
+		</div>
 		<Banner />
-		<Form />
 		<FAQ />
+		<Footer />
 	</main>
-	<Footer />
 </Layout>

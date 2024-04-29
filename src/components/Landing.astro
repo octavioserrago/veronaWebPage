@@ -1,26 +1,17 @@
----
-import img from "../../public/assets/Landing01.png";
----
-
 <div class="Landing w-dvw h-screen flex flex-col items-center">
     <h1
-        class="text-3xl md:text-5xl lg:text-6xl text-white text-center mt-8 font-bold"
+        class="text-3xl mt-8 md:text-5xl lg:text-6xl text-white text-center md:mt-8 lg:mt-8 xl:mt-20 font-bold"
         id="mainTitle"
     >
-        Marmoleria Verona
+        MARMOLERÍA VERONA
     </h1>
     <p
-        class="subtitle text-center text-white mt-4 font-normal text-2xl md:text-4xl lg:text-3xl"
+        class="subtitle text-center text-white font-normal text-base md:text-3xl lg:text-3xl xl:mt-4"
     >
-        Transformando espacios
-    </p>
-    <p
-        class="subtitle text-center text-white font-normal text-2xl md:text-4xl lg:text-3xl"
-    >
-        Dando vida a tus proyectos
+        Transformando espacios, dando vida a tus proyectos
     </p>
     <button
-        class="mt-4 px-4 py-2 rounded-full border border-white text-white bg-black hover:bg-yellow-500 transition-colors duration-50 ease-in-out"
+        class="mt-4 px-4 py-2 rounded-full border border-yellow-400 text-yellow-400 bg-black hover:bg-yellow-500 hover:text-white transition-colors duration-50 ease-in-out"
     >
         Contáctanos
     </button>
@@ -38,5 +29,10 @@ import img from "../../public/assets/Landing01.png";
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+    }
+
+    @media (max-width: 800px) {
+        .Landing {
+        }
     }
 </style>
