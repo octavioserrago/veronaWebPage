@@ -1,29 +1,23 @@
-<section class="pt-40 pb-96 relative bg-black">
-    <div
-        class="Landing absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat bg-fixed"
+<div class="Landing w-dvw h-screen flex flex-col items-center">
+    <h1
+        class="text-3xl mt-8 md:text-5xl lg:text-6xl text-white text-center md:mt-8 lg:mt-8 xl:mt-20 font-bold"
+        id="mainTitle"
     >
-        <h1
-            class="text-3xl mt-8 md:text-5xl lg:text-4xl text-white text-center md:mt-8 lg:mt-8 xl:mt-20 font-bold"
-            id="mainTitle"
+        MARMOLERÍA VERONA
+    </h1>
+    <p
+        class="subtitle text-center text-white font-normal text-base md:text-3xl lg:text-3xl xl:mt-4"
+    >
+        Transformando espacios, dando vida a tus proyectos
+    </p>
+    <a href="#contacto"
+        ><button
+            class="mt-4 px-4 py-2 rounded-full border border-yellow-400 text-yellow-400 bg-black hover:bg-yellow-500 hover:text-white transition-colors duration-50 ease-in-out"
         >
-            MARMOLERÍA VERONA
-        </h1>
-        <p
-            class="subtitle text-center text-white font-normal text-base md:text-3xl lg:text-xl"
-        >
-            Transformando espacios, dando vida a tus proyectos
-        </p>
-        <div class="flex justify-center">
-            <a href="#contacto">
-                <button
-                    class="mt-4 px-4 py-2 rounded-full border border-yellow-400 text-yellow-400 bg-black hover:bg-yellow-500 hover:text-white transition-colors duration-50 ease-in-out"
-                >
-                    Contáctanos
-                </button>
-            </a>
-        </div>
-    </div>
-</section>
+            Contáctanos
+        </button></a
+    >
+</div>
 
 <style>
     .subtitle {
@@ -34,7 +28,7 @@
     }
     .Landing {
         background-image: url("/assets/Landing01.png");
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
