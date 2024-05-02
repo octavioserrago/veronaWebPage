@@ -1,0 +1,41 @@
+---
+interface Props {
+    linkImagen: string;
+    altImagen: string;
+    title: string;
+    href: string;
+}
+
+const { href, linkImagen, altImagen, title } = Astro.props;
+---
+
+<a href={href} class="card-link">
+    <div class="w-full p-4">
+        <div
+            class="relative mb-8 overflow-hidden rounded-5xl card-wrapper transition-transform duration-500 ease-out hover:scale-105"
+        >
+            <h3
+                class="mt-4 mb-4 text-3xl text-white tracking-3xl absolute top-0 left-0 w-full text-left lg:text-6xl"
+                id="titleCard"
+            >
+                {title}
+            </h3>
+            <img src={linkImagen} alt={altImagen} class="card-image mt-4" />
+            <div class="flex justify-center items-center absolute inset-0">
+                <span class="text-white font-medium absolute bottom-0 mb-4"
+                    >Ver Más</span
+                >
+            </div>
+        </div>
+    </div>
+</a>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
+    #titlecard {
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+</style>

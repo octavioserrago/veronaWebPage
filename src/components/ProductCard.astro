@@ -10,7 +10,7 @@ interface Props {
 const { href, linkImagen, altImagen, title, body } = Astro.props;
 ---
 
-<div class="flex flex-col overflow-hidden">
+<div class="flex flex-col">
     <div class="flex-shrink-0">
         <a href={href}>
             <img src={linkImagen} alt={altImagen} />
