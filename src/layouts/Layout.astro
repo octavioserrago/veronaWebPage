@@ -5,6 +5,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 ---
 
 <!doctype html>
@@ -45,40 +46,39 @@ const { title, description } = Astro.props;
 			defer
 			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
 		></script>
+		<style is:global>
+			@font-face {
+				font-family: "San Francisco Display Ultralight";
+				font-style: normal;
+				font-weight: 400;
+				src:
+					url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.eot?#iefix)
+						format("embedded-opentype"),
+					url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2)
+						format("woff2"),
+					url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff)
+						format("woff"),
+					url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.ttf)
+						format("truetype"),
+					url("fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.svg#San Francisco Display Ultralight")
+						format("svg");
+			}
+			@font-face {
+				font-family: "San Francisco Display Semibold";
+				font-style: normal;
+				font-weight: 400;
+				src:
+					url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.eot?#iefix)
+						format("embedded-opentype"),
+					url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2)
+						format("woff2"),
+					url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff)
+						format("woff"),
+					url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.ttf)
+						format("truetype"),
+					url("fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.svg#San Francisco Display Semibold")
+						format("svg");
+			}
+		</style>
 	</body>
 </html>
-
-<style is:global>
-	@font-face {
-		font-family: "San Francisco Display Ultralight";
-		font-style: normal;
-		font-weight: 400;
-		src:
-			url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.eot?#iefix)
-				format("embedded-opentype"),
-			url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2)
-				format("woff2"),
-			url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff)
-				format("woff"),
-			url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.ttf)
-				format("truetype"),
-			url("fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.svg#San Francisco Display Ultralight")
-				format("svg");
-	}
-	@font-face {
-		font-family: "San Francisco Display Semibold";
-		font-style: normal;
-		font-weight: 400;
-		src:
-			url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.eot?#iefix)
-				format("embedded-opentype"),
-			url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2)
-				format("woff2"),
-			url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff)
-				format("woff"),
-			url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.ttf)
-				format("truetype"),
-			url("fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.svg#San Francisco Display Semibold")
-				format("svg");
-	}
-</style>

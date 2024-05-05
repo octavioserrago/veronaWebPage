@@ -2,16 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Landing from "../components/Landing.astro";
-import Card from "../components/Card.astro";
-import ProductCard from "../components/ProductCard.astro";
-import Granite from "../../public/assets/Granite-Block.png";
-import Marble from "../../public/assets/Marble-Block.png";
-import Purastone from "../../public/assets/Purastone-Block.png";
-import Silestone from "../../public/assets/Silestone-Block.png";
 import Contact from "../components/Contact.astro";
-import Banner from "../components/Banner.astro";
-import FAQ from "../components/FAQ.astro";
 import Footer from "../components/Footer.astro";
+import Products from "../components/Products.astro";
 ---
 
 <Layout
@@ -21,44 +14,7 @@ import Footer from "../components/Footer.astro";
 	<main>
 		<Navbar />
 		<Landing />
-		<section class="pt-20 pb-24 bg-slate-950">
-			<div class="container px-4 mx-auto">
-				<div class="text-center">
-					<h2
-						class="mb-12 text-4xl lg:text-8xl text-white tracking-7xl md:max-w-md mx-auto"
-						id="titleMateriales"
-					>
-						Nuestros Materiales
-					</h2>
-				</div>
-				<div class="flex flex-wrap m-4">
-					<Card
-						linkImagen={Granite.src}
-						altImagen="Bloque Granitos"
-						href="./"
-						title="Granitos"
-					/>
-					<Card
-						linkImagen={Marble.src}
-						altImagen="Bloque Marmol"
-						href="#"
-						title="Marmoles"
-					/>
-					<Card
-						linkImagen={Purastone.src}
-						altImagen="Bloque Purastone"
-						href="#"
-						title="Purastone"
-					/>
-					<Card
-						linkImagen={Silestone.src}
-						altImagen="Bloque Silestone"
-						href="#"
-						title="Silestone"
-					/>
-				</div>
-			</div>
-		</section>
+		<Products />
 		<Contact />
 		<Footer />
 	</main>
