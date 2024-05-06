@@ -1,0 +1,128 @@
+---
+const cardData = [
+    {
+        title: "101ec",
+        imgSrc: "/assets/bachas/100e/101-e.png",
+        imgHover: "/assets/bachas/100e/101-e-m.png",
+        description: "27x37x15",
+        subDescription: "ACERO AISI 430",
+    },
+    {
+        title: "102ec",
+        imgSrc: "/assets/bachas/100e/102-e.png",
+        imgHover: "/assets/bachas/100e/102-e-m.png",
+        description: "34x37x15",
+        subDescription: "ACERO AISI 430",
+    },
+    {
+        title: "103ec",
+        imgSrc: "/assets/bachas/100e/103-e.png",
+        imgHover: "/assets/bachas/100e/103-e-m.png",
+        description: "52x32x15",
+        subDescription: "ACERO AISI 430",
+    },
+    {
+        title: "104ec",
+        imgSrc: "/assets/bachas/100e/104-e.png",
+        imgHover: "/assets/bachas/100e/104-e-m.png",
+        description: "57x37x15",
+        subDescription: "ACERO AISI 430",
+    },
+    {
+        title: "105ec",
+        imgSrc: "/assets/bachas/100e/105-e.png",
+        imgHover: "/assets/bachas/100e/105-e-m.png",
+        description: "64x37x15",
+        subDescription: "ACERO AISI 430",
+    },
+    {
+        title: "143ec",
+        imgSrc: "/assets/bachas/100e/143-e.png",
+        imgHover: "/assets/bachas/100e/143-e-m.png",
+        description: "44x34x15",
+        subDescription: "ACERO AISI 430",
+    },
+];
+---
+
+<h2 class="text-center text-4xl tracking-tight pt-12" id="titlePiletas">
+    Nuestras Piletas
+</h2>
+<span class="block text-center text-sm italic text-gray-600 mt-2">
+    Venta únicamente con mesada adquirida en nuestro establecimiento
+</span>
+<span class="block text-center text-sm italic text-gray-600 mt-2 pb-4">
+    Vendemos únicamente marca "Mi Pileta"
+</span>
+<div class="contenedor text-center w-full md:w-2/4 lg:w-full pl-4 pr-4 pb-36">
+    <div class="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-3">
+        {
+            cardData.map((card) => (
+                <div
+                    class="card"
+                    data-img-src={card.imgSrc}
+                    data-img-hover={card.imgHover}
+                >
+                    <img
+                        class="h-auto max-w-full rounded-lg card-image"
+                        src={card.imgSrc}
+                        alt={card.title}
+                    />
+                    <h3 class="text-center text-lg font-semibold">
+                        {card.title}
+                    </h3>
+                    <p class="text-center text-sm">{card.description}</p>
+                    <p class="text-center text-xs">{card.subDescription}</p>
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card) => {
+            const cardImage = card.querySelector(
+                ".card-image",
+            ) as HTMLImageElement;
+            const imgSrc = card.getAttribute("data-img-src");
+            const imgHover = card.getAttribute("data-img-hover");
+            card.addEventListener("mouseover", () => {
+                cardImage.src = imgHover!;
+                card.classList.add("hovered");
+            });
+
+            card.addEventListener("mouseout", () => {
+                cardImage.src = imgSrc!;
+                card.classList.remove("hovered");
+            });
+        });
+    });
+</script>
+<style>
+    #titlePiletas {
+        font-family: "San Francisco Display Semibold";
+    }
+
+    .card {
+        text-align: center;
+        transition:
+            transform 0.3s ease-in-out,
+            width 0.3s ease-in-out,
+            height 0.3s ease-in-out;
+        overflow: hidden;
+    }
+
+    .card.hovered {
+        transform: scale(1.3);
+    }
+
+    .card:hover .card-image {
+        transform: scale(1.1);
+    }
+
+    .card-image {
+        transition: transform 0.3s ease-in-out;
+    }
+</style>
