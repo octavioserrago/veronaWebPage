@@ -1,3 +1,36 @@
+---
+const faqs = [
+    {
+        ask: "¿Dónde nos encontramos ubicados?",
+        ans: "Contamos con dos sedes de atención al público, ambas ubicadas en CABA. Nuestra fábrica se encuentra en Juan Bautista Alberdi 3333, y nuestra segunda sede está en Juan Bautista Alberdi 3778.",
+    },
+    {
+        ask: "¿Cuáles son sus horarios?",
+        ans: "La sede de Juan Bautista Alberdi 3333 está abierta de lunes a viernes de 8:30 a 12:30 y de 13:30 a 16:50. Los sábados, el horario es de 9:00 a 12:00 hs. Por otro lado, la sede en Juan Bautista Alberdi 3778 está abierta de lunes a viernes de 10:00 a 12:30 hs. y de 14:30 a 17:00 hs. Los sábados, el horario es de 10:00 a 13:00 hs.",
+    },
+    {
+        ask: "¿Qué servicios brinda la empresa?",
+        ans: "Ofrecemos una amplia gama de productos y servicios, desde la asesoría inicial hasta la instalación final de materiales. Nos comprometemos a satisfacer las necesidades de cada cliente. Además, proporcionamos servicios de corte y pulido de diferentes materiales. Para más detalles sobre estos servicios, contáctanos directamente para verificar la disponibilidad de los mismos.",
+    },
+    {
+        ask: "¿Qué necesito para tener un presupuesto?",
+        ans: "Para elaborar un presupuesto completo, necesitará medidas estimativas detalladas y el equipo de ventas de la empresa está listo para proporcionarle toda la asistencia necesaria.",
+    },
+    {
+        ask: "¿Hacen medición, flete y colocación?",
+        ans: "Sí, ofrecemos un servicio completo que incluye medición, flete y colocación. Estos se consideran como un paquete integral, asegurando una solución completa para nuestros clientes, aunque el precio se cotiza por separado.",
+    },
+    {
+        ask: "¿Qué materiales recomendamos para cocina?",
+        ans: "Recomendamos cuarzos claros y granitos debido a su superficie resistente a rallones, manchas y otros daños.",
+    },
+    {
+        ask: "¿Dónde puedo retirar mi compra?",
+        ans: "Una vez que la empresa lo haya contactado para que pueda retirar su compra, únicamente podrá hacerlo en la sucursal de Juan Bautista Alberdi 3333.",
+    },
+];
+---
+
 <section class="py-24 w-dvw bg-slate-50" id="faq">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mb-16">
@@ -12,202 +45,47 @@
         </div>
 
         <div class="accordion-group" data-accordion="default-accordion">
-            <div
-                class="accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl hover:bg-indigo-50 accordion-active:bg-indigo-50 active"
-                id="basic-heading-one-with-arrow"
-            >
-                <button
-                    class="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
-                    aria-controls="basic-collapse-one-with-arrow"
-                >
-                    <h5>¿Dónde nos encontramos ubicados?</h5>
-                    <svg
-                        class="text-gray-500 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+            {
+                faqs.map((card, index) => (
+                    <div
+                        class="card accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl hover:bg-gray-200 accordion-active:bg-indigo-50 active"
+                        id={`basic-heading-${index}-with-arrow`}
                     >
-                        <path
-                            d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                            stroke="currentColor"
-                            stroke-width="1.6"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-                <div
-                    id="basic-collapse-one-with-arrow"
-                    class="accordion-content w-full px-0 overflow-hidden cerrado"
-                    aria-labelledby="basic-heading-one-with-arrow"
-                    style="max-height: 0;"
-                >
-                    <p class="text-base text-gray-900 leading-6">
-                        Contamos con dos sedes de atención al público, ambas
-                        ubicadas en CABA. Nuestra fábrica se encuentra en Juan
-                        Bautista Alberdi 3333, y nuestra segunda sede está en
-                        Juan Bautista Alberdi 3778.
-                    </p>
-                </div>
-            </div>
-            <div
-                class="accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl hover:bg-indigo-50 accordion-active:bg-indigo-50 active"
-                id="basic-heading-one-with-arrow"
-            >
-                <button
-                    class="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
-                    aria-controls="basic-collapse-one-with-arrow"
-                >
-                    <h5>Que servicios brinda la empresa?</h5>
-                    <svg
-                        class="text-gray-500 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                            stroke="currentColor"
-                            stroke-width="1.6"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-                <div
-                    id="basic-collapse-one-with-arrow"
-                    class="accordion-content w-full px-0 overflow-hidden cerrado"
-                    aria-labelledby="basic-heading-one-with-arrow"
-                    style="max-height: 0;"
-                >
-                    <p class="text-base text-gray-900 leading-6">
-                        En nuestra empresa, nos enfocamos principalmente en
-                        brindar servicios especializados en el corte preciso y
-                        el pulido meticuloso de mesadas y vanitorys. Nuestro
-                        equipo está comprometido en ofrecer un acabado impecable
-                        y de alta calidad para satisfacer las necesidades de
-                        nuestros clientes. Además, brindamos asesoramiento
-                        personalizado y diseños creativos.
-                    </p>
-                </div>
-            </div>
-            <div
-                class="accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl hover:bg-indigo-50 accordion-active:bg-indigo-50 active"
-                id="basic-heading-one-with-arrow"
-            >
-                <button
-                    class="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
-                    aria-controls="basic-collapse-one-with-arrow"
-                >
-                    <h5>¿Qué necesito para tener un presupuesto?</h5>
-                    <svg
-                        class="text-gray-500 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                            stroke="currentColor"
-                            stroke-width="1.6"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-                <div
-                    id="basic-collapse-one-with-arrow"
-                    class="accordion-content w-full px-0 overflow-hidden cerrado"
-                    aria-labelledby="basic-heading-one-with-arrow"
-                    style="max-height: 0;"
-                >
-                    <p class="text-base text-gray-900 leading-6">
-                        Para elaborar un presupuesto completo, necesitará
-                        medidas estimativas detalladas y el equipo de ventas de
-                        la empresa está listo para proporcionarle toda la
-                        asistencia necesaria.
-                    </p>
-                </div>
-            </div>
-            <div
-                class="accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl hover:bg-indigo-50 accordion-active:bg-indigo-50 active"
-                id="basic-heading-one-with-arrow"
-            >
-                <button
-                    class="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
-                    aria-controls="basic-collapse-one-with-arrow"
-                >
-                    <h5>¿Hacen medición, flete y colocación?</h5>
-                    <svg
-                        class="text-gray-500 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                            stroke="currentColor"
-                            stroke-width="1.6"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-                <div
-                    id="basic-collapse-one-with-arrow"
-                    class="accordion-content w-full px-0 overflow-hidden cerrado"
-                    aria-labelledby="basic-heading-one-with-arrow"
-                    style="max-height: 0;"
-                >
-                    <p class="text-base text-gray-900 leading-6">
-                        Si, ofrecemos un servicio completo que incluye medición,
-                        flete y colocación. Estos se consideran como un paquete
-                        integral, asegurando una solución completa para nuestros
-                        clientes, aunque el precio se cotiza por separado.
-                    </p>
-                </div>
-            </div>
-            <div
-                class="accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl hover:bg-indigo-50 accordion-active:bg-indigo-50 active"
-                id="basic-heading-one-with-arrow"
-            >
-                <button
-                    class="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
-                    aria-controls="basic-collapse-one-with-arrow"
-                >
-                    <h5>¿Qué materiales recomendamos para cocina?</h5>
-                    <svg
-                        class="text-gray-500 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                            stroke="currentColor"
-                            stroke-width="1.6"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-                <div
-                    id="basic-collapse-one-with-arrow"
-                    class="accordion-content w-full px-0 overflow-hidden cerrado"
-                    aria-labelledby="basic-heading-one-with-arrow"
-                    style="max-height: 0;"
-                >
-                    <p class="text-base text-gray-900 leading-6">
-                        Recomendamos cuarzos claros y granitos debido a su
-                        superficie resistente a rallones, manchas y otros daños.
-                    </p>
-                </div>
-            </div>
+                        <button
+                            class="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-yellow-500 accordion-active:font-medium accordion-active:text-yellow-500"
+                            aria-controls={`basic-collapse-${index}-with-arrow`}
+                        >
+                            <h5>{card.ask}</h5>
+                            <svg
+                                class="text-gray-500 transition duration-500 group-hover:text-yellow-500 accordion-active:text-yellow-500 accordion-active:rotate-180"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                        <div
+                            id={`basic-collapse-${index}-with-arrow`}
+                            class="accordion-content w-full px-0 overflow-hidden cerrado"
+                            aria-labelledby={`basic-heading-${index}-with-arrow`}
+                            style={{ maxHeight: "0" }}
+                        >
+                            <p class="text-base text-gray-900 leading-6">
+                                {card.ans}
+                            </p>
+                        </div>
+                    </div>
+                ))
+            }
         </div>
     </div>
 </section>
