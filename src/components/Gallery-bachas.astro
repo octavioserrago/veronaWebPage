@@ -1,62 +1,64 @@
 ---
 const cardData = [
     {
-        title: "101ec",
-        imgSrc: "/assets/bachas/100e/101-e.png",
-        imgHover: "/assets/bachas/100e/101-e-m.png",
-        description: "27x37x15",
-        subDescription: "ACERO AISI 430",
+        title: "780e",
+        imgSrc: "/assets/bachas/780e.png",
+        imgHover: "/assets/bachas/780e-p.png",
+        description: "73x46x17",
+        subDescription: "ACERO AISI 304 18/08",
     },
     {
-        title: "102ec",
-        imgSrc: "/assets/bachas/100e/102-e.png",
-        imgHover: "/assets/bachas/100e/102-e-m.png",
-        description: "34x37x15",
-        subDescription: "ACERO AISI 430",
+        title: "ART. 801E AMICA",
+        imgSrc: "/assets/bachas/801e.png",
+        imgHover: "/assets/bachas/801e-p.png",
+        description: "54x36x18",
+        subDescription: "ACERO AISI 304 18/08",
+    },
+
+    {
+        title: "ART. 410E",
+        imgSrc: "/assets/bachas/410e.png",
+        imgHover: "/assets/bachas/410e-p.png",
+        description: "67,5x40,5x20",
+        subDescription: "ACERO AISI 304 18/08",
     },
     {
-        title: "103ec",
-        imgSrc: "/assets/bachas/100e/103-e.png",
-        imgHover: "/assets/bachas/100e/103-e-m.png",
-        description: "52x32x15",
-        subDescription: "ACERO AISI 430",
+        title: "303",
+        imgSrc: "/assets/bachas/303.png",
+        imgHover: "/assets/bachas/303-p.png",
+        description: "52x32x18",
+        subDescription: "ACERO AISI 304 18/08",
+    },
+
+    {
+        title: "304",
+        imgSrc: "/assets/bachas/304.png",
+        imgHover: "/assets/bachas/304-p.png",
+        description: "57x37x18",
+        subDescription: "ACERO AISI 304 18/08",
     },
     {
-        title: "104ec",
-        imgSrc: "/assets/bachas/100e/104-e.png",
-        imgHover: "/assets/bachas/100e/104-e-m.png",
-        description: "57x37x15",
-        subDescription: "ACERO AISI 430",
-    },
-    {
-        title: "105ec",
-        imgSrc: "/assets/bachas/100e/105-e.png",
-        imgHover: "/assets/bachas/100e/105-e-m.png",
-        description: "64x37x15",
-        subDescription: "ACERO AISI 430",
-    },
-    {
-        title: "143ec",
-        imgSrc: "/assets/bachas/100e/143-e.png",
-        imgHover: "/assets/bachas/100e/143-e-m.png",
-        description: "44x34x15",
-        subDescription: "ACERO AISI 430",
+        title: "305",
+        imgSrc: "/assets/bachas/305.png",
+        imgHover: "/assets/bachas/305-p.png",
+        description: "64x37x18",
+        subDescription: "ACERO AISI 304 18/08",
     },
 ];
 ---
 
 <h2 class="text-center text-5xl tracking-tight pt-12" id="titlePiletas">
-    Nuestras Piletas
+    Nuestras piletas más vendidas
 </h2>
 <span class="block text-center text-sm italic text-gray-600 mt-2">
     Venta únicamente con mesada adquirida en nuestro establecimiento
 </span>
 <span class="block text-center text-sm italic text-gray-600 mt-2 pb-4">
-    Vendemos únicamente marca "Mi Pileta"
+    Trabajamos toda la línea de piletas marca 'Mi Pileta'
 </span>
 <div class="contenedor mx-auto w-full md:w-2/4 lg:w-full pl-4 pr-4 pb-36">
     <div
-        class="grid gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-center"
+        class="grid gap-5 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 justify-center"
     >
         {
             cardData.map((card) => (
@@ -79,6 +81,14 @@ const cardData = [
             ))
         }
     </div>
+</div>
+<div class="flex justify-center">
+    <a href="https://mipileta.com.ar/catalogo/" target="_blank"
+        ><button
+            class="font-medium h-auto w-auto p-3 border rounded bg-yellow-400 hover:bg-yellow-500 mb-4 text-center justify-center"
+            >Ver todo el catálogo</button
+        ></a
+    >
 </div>
 
 <script>
