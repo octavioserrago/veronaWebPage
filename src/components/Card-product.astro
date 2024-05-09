@@ -1,0 +1,22 @@
+---
+interface Props {
+    title: string;
+    image: string;
+    href: string;
+}
+
+const { title, image, href } = Astro.props;
+---
+
+<li class="link-card transform transition duration-300 hover:scale-105">
+    <a href={href} class="block">
+        <img class="h-32 w-auto rounded-lg" src={image} alt={title} />
+        <h2 class="font-medium">{title}</h2>
+    </a>
+</li>
+
+<style>
+    .link-card {
+        list-style: none;
+    }
+</style>

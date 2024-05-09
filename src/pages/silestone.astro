@@ -1,0 +1,169 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import GalleryMaterialsStructure from "../components/Gallery-materials-structure.astro";
+
+const cards = [
+    {
+        image: "/assets/silestone/Silestone-Marquina.jpg",
+        title: "Et Marquina",
+        href: "/material/Et Marquina",
+    },
+    {
+        image: "/assets/silestone/Silestone-arcillaRed.jpg",
+        title: "Arcilla Red",
+        href: "/material/Arcilla Red",
+    },
+    {
+        image: "/assets/silestone/Silestone-Blanco-norte.jpg",
+        title: "Blanco Norte",
+        href: "/material/Blanco Norte",
+    },
+    {
+        image: "/assets/silestone/Silestone-blanco-stellar.jpg",
+        title: "Blanco Stellar",
+        href: "/material/Blanco Stellar",
+    },
+    {
+        image: "/assets/silestone/Silestone-blanco-zeus.jpg",
+        title: "Blanco Zeus",
+        href: "/material/Blanco Zeus",
+    },
+    {
+        image: "/assets/silestone/Silestone-Bohemian-flame.jpg",
+        title: "Bohemian Flame",
+        href: "/material/Bohemian Flame",
+    },
+    {
+        image: "/assets/silestone/Silestone-Brass-relish.jpg",
+        title: "Brass Relish",
+        href: "/material/Brass Relish",
+    },
+    {
+        image: "/assets/silestone/Silestone-calablue.jpg",
+        title: "Calablue",
+        href: "/material/Calablue",
+    },
+    {
+        image: "/assets/silestone/Silestone-Calacatta-gold.jpg",
+        title: "Calacatta Gold",
+        href: "/material/Calacatta Gold",
+    },
+    {
+        image: "/assets/silestone/Silestone-Charcoal.jpg",
+        title: "Charcoal",
+        href: "/material/Charcoal",
+    },
+    {
+        image: "/assets/silestone/Silestone-concrete-pulse.jpg",
+        title: "Concrete Pulse",
+        href: "/material/Concrete Pulse",
+    },
+    {
+        image: "/assets/silestone/Silestone-et.noir.jpg",
+        title: "Et Noir",
+        href: "/material/Et Noir",
+    },
+    {
+        image: "/assets/silestone/Silestone-ethereal-dusk.jpg",
+        title: "Ethereal Dusk",
+        href: "/material/Ethereal Dusk",
+    },
+    {
+        image: "/assets/silestone/Silestone-etherGlow.jpg",
+        title: "Ether Glow",
+        href: "/material/Ether Glow",
+    },
+    {
+        image: "/assets/silestone/Silestone-Gris-Expo.png",
+        title: "Gris Expo",
+        href: "/material/Gris Expo",
+    },
+    {
+        image: "/assets/silestone/Silestone-gris-marengo.jpg",
+        title: "Gris Marengo",
+        href: "/material/Gris Marengo",
+    },
+    {
+        image: "/assets/silestone/Silestone-Lime-delight.jpg",
+        title: "Lime Delight",
+        href: "/material/Lime Delight",
+    },
+    {
+        image: "/assets/silestone/Silestone-miamiVena.jpg",
+        title: "Miami Vena",
+        href: "/material/Miami Vena",
+    },
+    {
+        image: "/assets/silestone/Silestone-miamiwhite.jpg",
+        title: "Miami White",
+        href: "/material/Miami White",
+    },
+    {
+        image: "/assets/silestone/Silestone-negro-stellar.jpg",
+        title: "Negro Stellar",
+        href: "/material/Negro Stellar",
+    },
+    {
+        image: "/assets/silestone/Silestone-negroTebas.jpg",
+        title: "Negro Tebas",
+        href: "/material/Negro Tebas",
+    },
+    {
+        image: "/assets/silestone/Silestone-niebla.jpg",
+        title: "Niebla",
+        href: "/material/Niebla",
+    },
+    {
+        image: "/assets/silestone/Silestone-Noka.jpg",
+        title: "Noka",
+        href: "/material/Noka",
+    },
+    {
+        image: "/assets/silestone/Silestone-Parisien-bleu.jpg",
+        title: "Parisien Bleu",
+        href: "/material/Parisien Bleu",
+    },
+    {
+        image: "/assets/silestone/Silestone-pealjasmine.jpg",
+        title: "Pearl Jasmine",
+        href: "/material/Pearl Jasmine",
+    },
+    {
+        image: "/assets/silestone/Silestone-Posidonia-Green.jpg",
+        title: "Posidonia Green",
+        href: "/material/Posidonia Green",
+    },
+    {
+        image: "/assets/silestone/Silestone-romantic-ash.jpg",
+        title: "Romantic Ash",
+        href: "/material/Romantic Ash",
+    },
+    {
+        image: "/assets/silestone/Silestone-Rougui.jpg",
+        title: "Rougui",
+        href: "/material/Rougui",
+    },
+    {
+        image: "/assets/silestone/Silestone-victorian-silver.jpg",
+        title: "Victorian Silver",
+        href: "/material/Victorian Silver",
+    },
+];
+---
+
+<Layout
+    title="Silestone"
+    description="Marmolería Verona, líder en Buenos Aires en la provisión de mármoles y granitos de alta calidad. Ofrecemos una amplia gama de productos, desde granitos auténticos hasta mármoles elegantes y superficies de cuarzo premium como Silestone o Purastone. Nuestros materiales nacionales e importados realzan cualquier espacio, brindando belleza y durabilidad. Visítanos para descubrir la perfecta fusión entre belleza y resistencia."
+>
+    <main>
+        <Navbar />
+        <GalleryMaterialsStructure
+            title="Silestone"
+            body="Nuestros Silestone"
+            cards={cards}
+        />
+        <Footer />
+    </main>
+</Layout>

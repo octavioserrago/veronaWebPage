@@ -2,6 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import GalleryMaterialsStructure from "../components/Gallery-materials-structure.astro";
+
+const cards = [
+    {
+        image: "/assets/silestone/Silestone-Marquina.jpg",
+        title: "Et Marquina",
+        href: "",
+    },
+];
 ---
 
 <Layout
@@ -10,7 +19,11 @@ import Footer from "../components/Footer.astro";
 >
     <main>
         <Navbar />
-
+        <GalleryMaterialsStructure
+            title="Granitos"
+            body="Nuestros granitos"
+            cards={cards}
+        />
         <Footer />
     </main>
 </Layout>

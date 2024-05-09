@@ -1,0 +1,29 @@
+---
+interface Props {
+    title: string;
+    body: string;
+    cards: { image: string; title: string; href: string }[];
+}
+
+const { title, body, cards } = Astro.props;
+
+import CardProduct from "./Card-product.astro";
+---
+
+<div class="contenedor">
+    <h2 class="text-4xl">{title}</h2>
+    <p>{body}</p>
+    <div class="contenedor-cards p-24">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+            {
+                cards.map((card) => (
+                    <CardProduct
+                        image={card.image}
+                        title={card.title}
+                        href={card.href}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</div>
