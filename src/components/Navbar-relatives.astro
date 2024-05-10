@@ -1,0 +1,220 @@
+---
+import Silestone from "/public/assets/silestone.png";
+import Purastone from "/public/assets/Purastone.png";
+import Logo from "/public/assets/verona.jpg";
+---
+
+<nav
+    class="navbar bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900 w-dvw"
+>
+    <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4"
+    >
+        <a href="../." class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src={Logo.src} class="h-15 w-40" alt="Verona Logo" />
+        </a>
+        <button
+            data-collapse-toggle="mega-menu-full"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mega-menu-full"
+            aria-expanded="false"
+        >
+            <span class="sr-only">Open main menu</span>
+            <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15"></path>
+            </svg>
+        </button>
+        <div
+            id="mega-menu-full"
+            class="items-center justify-between font-medium hidden w-full lg:flex lg:w-auto lg:order-1"
+        >
+            <ul
+                class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700"
+            >
+                <li>
+                    <a
+                        href="../."
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-yellow-500 lg:dark:hover:bg-transparent dark:border-gray-700"
+                        aria-current="page">Inicio</a
+                    >
+                </li>
+                <li>
+                    <button
+                        id="mega-menu-full-dropdown-button"
+                        data-collapse-toggle="mega-menu-full-dropdown"
+                        class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded lg:w-auto hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-500 lg:p-0 dark:text-white lg:dark:hover:text-yellow-400 dark:hover:bg-gray-700 dark:hover:text-yellow-400 lg:dark:hover:bg-transparent dark:border-gray-700"
+                        >Catálogo<svg
+                            class="w-2.5 h-2.5 ms-2.5"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 10 6"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 1 4 4 4-4"></path>
+                        </svg></button
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-yellow-500 lg:dark:hover:bg-transparent dark:border-gray-700"
+                        >Nosotros</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="/Piletas"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-yellow-500 lg:dark:hover:bg-transparent dark:border-gray-700"
+                        >Piletas</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="./#contacto"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-yellow-500 lg:dark:hover:bg-transparent dark:border-gray-700"
+                        >Contacto</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="/faq"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-yellow-500 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-yellow-500 lg:dark:hover:bg-transparent dark:border-gray-700"
+                        >Preguntas Frecuentes</a
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div
+        id="mega-menu-full-dropdown"
+        class="hidden mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600"
+    >
+        <div
+            class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6"
+        >
+            <ul>
+                <li>
+                    <a
+                        href="/silestone"
+                        class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                        <img
+                            src={Silestone.src}
+                            alt="Logo Silestone"
+                            class="w-40 h-auto"
+                        />
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Silestone es la superficie mineral híbrida baja en
+                            sílice, fabricada con minerales premium y materiales
+                            reciclados. Su revolucionaria tecnología Hybriq+®
+                            reduce eficazmente el contenido de sílice
+                            cristalina, dando como resultado una superficie
+                            mineral innovadora, sostenible y de alto
+                            rendimiento.</span
+                        >
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                        <div
+                            class="text-2xl font-roboto font-light"
+                            style="letter-spacing: 5px;"
+                        >
+                            GRANITO
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Sumérgete en el mundo del granito, donde la belleza
+                            natural se combina con la durabilidad excepcional
+                            para crear espacios que inspiran. Ya sea nacional o
+                            importado, cada pieza de granito narra una historia
+                            singular, enriquecida por siglos de formación
+                            geológica y meticuloso trabajo artesanal.</span
+                        >
+                    </a>
+                </li>
+                <li></li>
+            </ul>
+            <ul>
+                <li>
+                    <a
+                        href="#"
+                        class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                        <img
+                            src={Purastone.src}
+                            alt="Logo Purastone"
+                            class="w-40 h-auto"
+                        />
+                        <span
+                            class="text-sm text-gray-500 dark:text-gray-400 mb-4"
+                            >Purastone® es una superficie de cuarzo premium con
+                            características únicas: alta resistencia a rayas y
+                            manchas, fácil de limpiar y de instalar. Es de alta
+                            durabilidad, apta para mesadas de cocina y baño y
+                            para aplicaciones de uso comercial (barras,
+                            mostradores, etc).</span
+                        >
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                        <div
+                            class="text-2xl font-roboto font-light"
+                            style="letter-spacing: 5px;"
+                        >
+                            MÁRMOL
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Sumérgete en un mundo de lujo y sofisticación con
+                            nuestro mármol de primera calidad, una verdadera
+                            obra maestra de la naturaleza. Desde los tonos
+                            suaves y sutiles hasta los patrones audaces y
+                            dramáticos, nuestro mármol ofrece una gama infinita
+                            de posibilidades para elevar cualquier espacio.</span
+                        >
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(
+            '[data-collapse-toggle="mega-menu-full"]',
+        );
+        const megaMenuDropdown = document.getElementById(
+            "mega-menu-full-dropdown",
+        );
+
+        menuButton.addEventListener("click", function () {
+            const isOpen = !megaMenuDropdown.classList.contains("hidden");
+            if (isOpen) {
+                megaMenuDropdown.classList.add("hidden");
+            }
+        });
+    });
+</script>
