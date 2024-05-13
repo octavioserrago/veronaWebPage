@@ -134,11 +134,60 @@ const materials = {
             "Eternal Noir es el resultado de un delicado y cuidado diseño, inspirado en la estética simétrica y la elegancia de la piedra natural. Sus líneas rectas y diseño sobrio inspira espacios oscuros pero acogedores, elegantes y con luz propia.",
         chapa: "/assets/silestone/chapas-completas/et-noir-completa.avif",
     },
+    "Ethereal Dusk": {
+        slider1: "/assets/silestone/espacios/ethereal-dusk-m2.jpg",
+        slider2: "/assets/silestone/espacios/ethereal-dusk-m3.jpg",
+        slider3: "/assets/silestone/Silestone-ethereal-dusk.jpg",
+        description:
+            "El tono azulado en el interior de cada una de sus vetas le aporta un toque moderno que, sumado a su vanguardista direccionalidad geométrica, hace de Ethereal Dusk uno de los diseños más urbanos y actuales de la colección.",
+        chapa: "/assets/silestone/chapas-completas/",
+    },
+    "Ether Glow": {
+        slider1: "/assets/silestone/espacios/ethereal-glow-m1.jpg",
+        slider2: "/assets/silestone/espacios/ethereal-glow-m2.jpg",
+        slider3: "/assets/silestone/espacios/ethereal-glow-m3.jpg",
+        description:
+            "Las vetas, en elegantes tonalidades doradas y grises, se funden en un fondo blanco matizado, atravesando la tabla y distribuyendo el color en cada rincón, aportando valor al diseño.",
+        chapa: "/assets/silestone/chapas-completas/ethereal-glow-completa.avif",
+    },
+    "Gris Expo": {
+        slider1: "/assets/silestone/espacios/gris-expo-m1.jpg",
+        slider2: "/assets/silestone/espacios/gris-expo-m2.jpeg",
+        slider3: "/assets/silestone/Silestone-Gris-Expo.png",
+        description:
+            "Las vetas, en elegantes tonalidades doradas y grises, se funden en un fondo blanco matizado, atravesando la tabla y distribuyendo el color en cada rincón, aportando valor al diseño.",
+        chapa: "/assets/silestone/chapas-completas/gris-expo-completa.avif",
+    },
+    "Gris Marengo": {
+        slider1: "/assets/silestone/espacios/marengo-m1.jpg",
+        slider2: "/assets/silestone/espacios/gris-marengo-m2.jpg",
+        slider3: "/assets/silestone/Silestone-gris-marengo.jpg",
+        description:
+            "La filosofía menos es más se cumple con Marengo, un tono en la gama de los grises apagados que se aproxima al negro y es escogido por amantes de la sencillez y el buen gusto.",
+        chapa: "/assets/silestone/chapas-completas/gris-marengo-completa.avif",
+    },
+    "Lime Delight": {
+        slider1: "/assets/silestone/espacios/lime-delight-m1.jpg",
+        slider2: "/assets/silestone/espacios/lime-delight-m2.jpg",
+        slider3: "/assets/silestone/Silestone-Lime-delight.jpg",
+        description:
+            "Los tonos beige texturizados de Lime Delight son una base versátil para cualquier diseño de interiores, desde espacios tranquilos y puros hasta propuestas más inesperadas. Sus tonos cálidos y luminosos evocan el resplandor de la famosa piedra caliza de Marbella.",
+        chapa: "/assets/silestone/chapas-completas/lime-delight-completa.avif",
+    },
+    "Miami Vena": {
+        slider1: "/assets/silestone/espacios/miami-vena-m1.jpg",
+        slider2: "/assets/silestone/espacios/miami-vena-m1.jpg",
+        slider3: "/assets/silestone/Silestone-miamiVena.jpg",
+        description:
+            "Diseño neutro en tonos claros veteados sobre una base totalmente blanca.",
+        chapa: "/assets/silestone/chapas-completas/miami-vena-completa.avif",
+    },
 };
 
 const { material } = Astro.params;
 
 const materialData = materials[material];
+export const prerender = true;
 ---
 
 <Layout title={material} description={materialData.description}>
