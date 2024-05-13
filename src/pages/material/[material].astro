@@ -12,7 +12,7 @@ export function getStaticPaths() {
         { params: { material: "Blanco Zeus" } },
         { params: { material: "Bohemian Flame" } },
         { params: { material: "Brass Relish" } },
-        { params: { material: "Calablue" } },
+        { params: { material: "Cala Blue" } },
         { params: { material: "Calacatta Gold" } },
         { params: { material: "Charcoal" } },
         { params: { material: "Concrete Pulse" } },
@@ -70,6 +70,14 @@ const materials = {
             "Un tono frío y limpio con acabado en alto brillo. Este color da a las habitaciones una sensación de luminosidad y espacio",
         chapa: "/assets/silestone/chapas-completas/blanco-stellar-completa.avif",
     },
+    "Blanco Zeus": {
+        slider1: "/assets/silestone/espacios/blanco-zeus-m1.jpg",
+        slider2: "/assets/silestone/espacios/blanco-zeus-m2.jpg",
+        slider3: "/assets/silestone/espacios/blanco-zeus-m3.jpg",
+        description:
+            "Un blanco casi impoluto, energético y atemporal. Una apuesta segura para acertar con la decoración de cualquier espacio.",
+        chapa: "/assets/silestone/chapas-completas/blanco-zeus-completa.avif",
+    },
     "Bohemian Flame": {
         slider1: "/assets/silestone/espacios/bohemian-flame-m1.jpg",
         slider2: "/assets/silestone/espacios/bohemian-flare-m2.jpg",
@@ -77,6 +85,54 @@ const materials = {
         description:
             "Es un gris oscuro en acabado mate cuya textura recuerda a una mezcla entre cemento y caliza. Tiene vetas sinuosas finas, con incrustaciones metálicas en tonos cobrizos. Inspirada en el movimiento de las coladas de lava más fluidas que generan cicatrices sobre el suelo volcánico.",
         chapa: "/assets/silestone/chapas-completas/bohemian-flame-completa.avif",
+    },
+    "Brass Relish": {
+        slider1: "/assets/silestone/espacios/brass-relish-m1.jpg",
+        slider2: "/assets/silestone/espacios/brass-relish-m2.jpg",
+        slider3: "/assets/silestone/espacios/brass-relish-m3.jpg",
+        description:
+            "Un marrón cobrizo de grano único, encarna la arenisca de grano fino. Combina a la perfección con los colores y elementos de diseño del estilo vintage moderno.",
+        chapa: "/assets/silestone/chapas-completas/brass-relish-completa.avif",
+    },
+    "Cala Blue": {
+        slider1: "/assets/silestone/espacios/cala-blue-m1.jpg",
+        slider2: "/assets/silestone/espacios/cala-blue-m2.jpg",
+        slider3: "/assets/silestone/Silestone-calablue.jpg",
+        description:
+            "Es un azul profundo, moderno y estimulante que en su interacción con la luz se balancea entre la profundidad y la superficie del mar.",
+        chapa: "/assets/silestone/chapas-completas/cala-blue-completa.avif",
+    },
+    "Calacatta Gold": {
+        slider1: "/assets/silestone/espacios/calacatta-gold-m1.jpg",
+        slider2: "/assets/silestone/espacios/calacatta-gold-m2.jpg",
+        slider3: "/assets/silestone/Silestone-Calacatta-gold.jpg",
+        description:
+            "Color compuesto por un fondo blanco donde elegantes y gruesos veteados grises son interrumpidos por imprevistos detalles dorados. Calacatta Gold rememora a uno de los mármoles más apreciados desde la antigüedad por su apariencia eterna y distinguida.",
+        chapa: "/assets/silestone/chapas-completas/calacatta-gold-completa.avif",
+    },
+    Charcoal: {
+        slider1: "/assets/silestone/espacios/charcoal-m1.jpg",
+        slider2: "/assets/silestone/espacios/charcoal-m2.jpeg",
+        slider3: "/assets/silestone/Silestone-Charcoal.jpg",
+        description:
+            "Inspirado en la popular “piedra jabón” o soapstone, este color presenta un acabado gris azulado con enérgicas vetas grises. Espectacular opción caracterizada por su rotundidad, profundidad y movimiento.",
+        chapa: "/assets/silestone/chapas-completas/charcoal-completa.avif",
+    },
+    "Concrete Pulse": {
+        slider1: "/assets/silestone/espacios/concrete-pulse-m1.jpg",
+        slider2: "/assets/silestone/espacios/concrete-pulse-m3.jpg",
+        slider3: "/assets/silestone/Silestone-concrete-pulse.jpg",
+        description:
+            "Inspirado en la popular “piedra jabón” o soapstone, este color presenta un acabado gris azulado con enérgicas vetas grises. Espectacular opción caracterizada por su rotundidad, profundidad y movimiento.",
+        chapa: "/assets/silestone/chapas-completas/concrete-pulse-completa.avif",
+    },
+    "Et Noir": {
+        slider1: "/assets/silestone/espacios/et-noir-m1.jpg",
+        slider2: "/assets/silestone/espacios/et-noir-m3.jpg",
+        slider3: "/assets/silestone/Silestone-et.noir.jpg",
+        description:
+            "Eternal Noir es el resultado de un delicado y cuidado diseño, inspirado en la estética simétrica y la elegancia de la piedra natural. Sus líneas rectas y diseño sobrio inspira espacios oscuros pero acogedores, elegantes y con luz propia.",
+        chapa: "/assets/silestone/chapas-completas/et-noir-completa.avif",
     },
 };
 
@@ -248,7 +304,7 @@ const materialData = materials[material];
                 </div>
                 <a href="/silestone">
                     <p
-                        class="text-center text-3xl hover:underline pt-8 hover:text-yellow-500"
+                        class="text-center text-xl hover:underline pt-8 hover:text-yellow-500"
                     >
                         <i class="fa-solid fa-reply"></i> Volver al catalogo de Silestone
                     </p>
