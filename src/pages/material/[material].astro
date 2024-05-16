@@ -182,6 +182,94 @@ const materials = {
             "Diseño neutro en tonos claros veteados sobre una base totalmente blanca.",
         chapa: "/assets/silestone/chapas-completas/miami-vena-completa.avif",
     },
+    "Miami White": {
+        slider1: "/assets/silestone/espacios/miami-white-m1.jpg",
+        slider2: "/assets/silestone/espacios/miami-white-m2.jpg",
+        slider3: "/assets/silestone/Silestone-miamiwhite.jpg",
+        description:
+            "Color clásico, ideal para los amantes de los blancos que proporcionan calidez a los ambientes.",
+        chapa: "/assets/silestone/chapas-completas/miami-white-completa.avif",
+    },
+    "Negro Stellar": {
+        slider1: "/assets/silestone/espacios/negro-stellar-m1.jpg",
+        slider2: "/assets/silestone/espacios/negro-stellar-m2.jpg",
+        slider3: "/assets/silestone/Silestone-negro-stellar.jpg",
+        description:
+            "Llamativo juego de luces gracias a los cristales encajados sobre fondo negro intenso.",
+        chapa: "/assets/silestone/chapas-completas/negro-stellar-completa.avif",
+    },
+    "Negro Tebas": {
+        slider1: "/assets/silestone/espacios/negro-tebas-m1.jpg",
+        slider2: "/assets/silestone/espacios/negro-tebas-m2.jpeg",
+        slider3: "/assets/silestone/Silestone-negroTebas.jpg",
+        description:
+            "Gracias a la tecnología N-Boost este negro luce impoluto y brillante, sin impurezas, ni vetas. Solo el negro más puro y cautivador.",
+        chapa: "/assets/silestone/chapas-completas/negro-tebas-completa.avif",
+    },
+    Niebla: {
+        slider1: "/assets/silestone/espacios/niebla-m1.jpg",
+        slider2: "/assets/silestone/espacios/niebla-m2.jpg",
+        slider3: "/assets/silestone/espacios/niebla-m3.jpg",
+        description:
+            "Un gris suave propio de las nubes que surcan las colinas en la mañana de una tarde lluviosa, así es Niebla.",
+        chapa: "/assets/silestone/chapas-completas/niebla-completa.avif",
+    },
+    Noka: {
+        slider1: "/assets/silestone/espacios/noka-m1.jpg",
+        slider2: "/assets/silestone/espacios/noka-m2.jpg",
+        slider3: "/assets/silestone/Silestone-Noka.jpg",
+        description:
+            "La elegancia y el buen gusto van de la mano de Noka, un básico que querrá integrar en cualquier parte, interior o exterior.",
+        chapa: "/assets/silestone/chapas-completas/noka-completa.avif",
+    },
+    "Parisien Bleu": {
+        slider1: "/assets/silestone/espacios/parisien-bleu-m1.jpg",
+        slider2: "/assets/silestone/espacios/parisien-bleu-m2.jpg",
+        slider3: "/assets/silestone/espacios/parisien-bleu-m3.jpg",
+        description:
+            "Un profundo tono azulado con fuerte personalidad y poderoso carácter. Su majestuoso fondo, inspirado en las tonalidades de las famosas piedras de la Roma Imperial, se salpica con finas vetas e incrustaciones en tonos ocres.",
+        chapa: "/assets/silestone/chapas-completas/parisien-bleu-completa.avif",
+    },
+    "Pearl Jasmine": {
+        slider1: "/assets/silestone/espacios/pearl-jasmine-m1.jpg",
+        slider2: "/assets/silestone/espacios/pearl-jasmine-m2.jpg",
+        slider3: "/assets/silestone/espacios/pearl-jasmine-m3.jpg",
+        description:
+            "Con un aspecto de piedra caliza blanca y cubierto con sutiles vetas grises, crea un impresionante efecto de grietas. Este modelo combina perfectamente con una cocina clásica ó rural y aquellas que pretenden recrear un leve sentido de la tradición.",
+        chapa: "/assets/silestone/chapas-completas/pearl-jasmine-completa.avif",
+    },
+    "Posidonia Green": {
+        slider1: "/assets/silestone/espacios/posidonia-green-m1.jpg",
+        slider2: "/assets/silestone/espacios/posidonia-green-m2.jpg",
+        slider3: "/assets/silestone/espacios/posidonia-green-m3.jpg",
+        description:
+            "Un verde sereno, lleno de luz que ilumina con elegancia los espacios y ofrece armonía a cualquier estancia.",
+        chapa: "/assets/silestone/chapas-completas/posidonia-green-completa.avif",
+    },
+    "Romantic Ash": {
+        slider1: "/assets/silestone/espacios/romantic-ash-m1.jpg",
+        slider2: "/assets/silestone/espacios/romantic-ash-m2.jpg",
+        slider3: "/assets/silestone/espacios/romantic-ash-m3.jpg",
+        description:
+            "Grandes vetas e incrustaciones de grano de diversos tamaños recuerdan a la vía láctea en un cielo estrellado. El azul de su fondo refuerza la profundidad de Romantic Ash.",
+        chapa: "/assets/silestone/chapas-completas/romantic-ash-completa.avif",
+    },
+    Rougui: {
+        slider1: "/assets/silestone/espacios/rougui-m1.jpg",
+        slider2: "/assets/silestone/espacios/rogui-m2.jpg",
+        slider3: "/assets/silestone/Silestone-Rougui.jpg",
+        description:
+            "Su intensidad y diseño aportarán a cualquier ambiente toda la fuerza y viveza para convertirse en un lugar mágico y acogedor.",
+        chapa: "/assets/silestone/chapas-completas/rogui-completa.avif",
+    },
+    "Victorian Silver": {
+        slider1: "/assets/silestone/espacios/victorian-silver-m1.jpg",
+        slider2: "/assets/silestone/espacios/victorian-silver-m2.jpg",
+        slider3: "/assets/silestone/espacios/victorian-silver-m3.jpg",
+        description:
+            "Suave y sutil jaspeado bicolor en el fondo con efectos degradados y gran profundidad. El tono frío del fondo se mezcla con sus vetas plateadas y grises oscuras para crear un color elegante que encaja a la perfección con tonos cálidos y fríos. Victorian Silver encarna el encanto de la historia. Sumérjete en el mundo victoriano de la elegancia y la sofisticación, donde cada momento es un tesoro atemporal.",
+        chapa: "/assets/silestone/chapas-completas/victorian-silver-completa.avif",
+    },
 };
 
 const { material } = Astro.params;
@@ -328,7 +416,7 @@ export const prerender = true;
             </section>
             <div class="chapaC w-full p-4 mb-8 lg:pl-32 lg:pr-32">
                 <h2
-                    class="text-2xl text-left"
+                    class="text-2xl text-left pb-2 font-normal"
                     style="font-family:San
                     Francisco
                     Display
