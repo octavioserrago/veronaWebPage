@@ -2,6 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar-relatives.astro";
 import Footer from "../../components/Footer.astro";
+import Rayadura from "../../../public/assets/rasga.png";
+import Calor from "../../../public/assets/calor.png";
+import Golpe from "../../../public/assets/pegar.png";
+import Mancha from "../../../public/assets/mancha.png";
+import uv from "../../../public/assets/ultravioleta.png";
 
 export function getStaticPaths() {
     return [
@@ -45,6 +50,11 @@ const materials = {
         description:
             "Evocando al bello mármol español Negro Marquina, esta opción regala una vehemente base de color negro donde surgen contundentes e intensos detalles y veteados blancos.",
         chapa: "/assets/silestone/chapas-completas/silestone-marquina-completo.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 4,
+        puntajeCalor: 2,
+        puntajeImpacto: 4,
+        puntajeUv: 2,
     },
     "Arcilla Red": {
         slider1: "/assets/silestone/espacios/arcilla-red-m1.jpg",
@@ -53,6 +63,11 @@ const materials = {
         description:
             "Un rojo profundo y terroso que genera espacios acogedores y cálidos.",
         chapa: "/assets/silestone/chapas-completas/arcilla-red-chapa.avif",
+        puntajeRayadura: 2,
+        puntajeManchas: 3,
+        puntajeCalor: 2,
+        puntajeImpacto: 4,
+        puntajeUv: 2,
     },
     "Blanco Norte": {
         slider1: "/assets/silestone/espacios/blanco-norte-m2.png",
@@ -61,6 +76,11 @@ const materials = {
         description:
             "Como ventisca de aire polar, inspirado en el más blanco invierno del Norte, un blanco que recuerda la belleza y el poder de la naturaleza.",
         chapa: "/assets/silestone/chapas-completas/blanco-norte-completa.avif",
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
+        puntajeCalor: 4,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Blanco Stellar": {
         slider1: "/assets/silestone/espacios/blanco-stellar-m1.jpg",
@@ -69,6 +89,11 @@ const materials = {
         description:
             "Un tono frío y limpio con acabado en alto brillo. Este color da a las habitaciones una sensación de luminosidad y espacio",
         chapa: "/assets/silestone/chapas-completas/blanco-stellar-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 2,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Blanco Zeus": {
         slider1: "/assets/silestone/espacios/blanco-zeus-m1.jpg",
@@ -77,6 +102,11 @@ const materials = {
         description:
             "Un blanco casi impoluto, energético y atemporal. Una apuesta segura para acertar con la decoración de cualquier espacio.",
         chapa: "/assets/silestone/chapas-completas/blanco-zeus-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 4,
+        puntajeCalor: 4,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Bohemian Flame": {
         slider1: "/assets/silestone/espacios/bohemian-flame-m1.jpg",
@@ -85,6 +115,11 @@ const materials = {
         description:
             "Es un gris oscuro en acabado mate cuya textura recuerda a una mezcla entre cemento y caliza. Tiene vetas sinuosas finas, con incrustaciones metálicas en tonos cobrizos. Inspirada en el movimiento de las coladas de lava más fluidas que generan cicatrices sobre el suelo volcánico.",
         chapa: "/assets/silestone/chapas-completas/bohemian-flame-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Brass Relish": {
         slider1: "/assets/silestone/espacios/brass-relish-m1.jpg",
@@ -93,6 +128,11 @@ const materials = {
         description:
             "Un marrón cobrizo de grano único, encarna la arenisca de grano fino. Combina a la perfección con los colores y elementos de diseño del estilo vintage moderno.",
         chapa: "/assets/silestone/chapas-completas/brass-relish-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 2,
     },
     "Cala Blue": {
         slider1: "/assets/silestone/espacios/cala-blue-m1.jpg",
@@ -101,6 +141,11 @@ const materials = {
         description:
             "Es un azul profundo, moderno y estimulante que en su interacción con la luz se balancea entre la profundidad y la superficie del mar.",
         chapa: "/assets/silestone/chapas-completas/cala-blue-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 4,
+        puntajeCalor: 2,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Calacatta Gold": {
         slider1: "/assets/silestone/espacios/calacatta-gold-m1.jpg",
@@ -109,6 +154,11 @@ const materials = {
         description:
             "Color compuesto por un fondo blanco donde elegantes y gruesos veteados grises son interrumpidos por imprevistos detalles dorados. Calacatta Gold rememora a uno de los mármoles más apreciados desde la antigüedad por su apariencia eterna y distinguida.",
         chapa: "/assets/silestone/chapas-completas/calacatta-gold-completa.avif",
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     Charcoal: {
         slider1: "/assets/silestone/espacios/charcoal-m1.jpg",
@@ -117,6 +167,11 @@ const materials = {
         description:
             "Inspirado en la popular “piedra jabón” o soapstone, este color presenta un acabado gris azulado con enérgicas vetas grises. Espectacular opción caracterizada por su rotundidad, profundidad y movimiento.",
         chapa: "/assets/silestone/chapas-completas/charcoal-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 4,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Concrete Pulse": {
         slider1: "/assets/silestone/espacios/concrete-pulse-m1.jpg",
@@ -125,6 +180,11 @@ const materials = {
         description:
             "Inspirado en la popular “piedra jabón” o soapstone, este color presenta un acabado gris azulado con enérgicas vetas grises. Espectacular opción caracterizada por su rotundidad, profundidad y movimiento.",
         chapa: "/assets/silestone/chapas-completas/concrete-pulse-completa.avif",
+        puntajeRayadura: 4,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Et Noir": {
         slider1: "/assets/silestone/espacios/et-noir-m1.jpg",
@@ -133,6 +193,11 @@ const materials = {
         description:
             "Eternal Noir es el resultado de un delicado y cuidado diseño, inspirado en la estética simétrica y la elegancia de la piedra natural. Sus líneas rectas y diseño sobrio inspira espacios oscuros pero acogedores, elegantes y con luz propia.",
         chapa: "/assets/silestone/chapas-completas/et-noir-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 2,
+        puntajeImpacto: 4,
+        puntajeUv: 2,
     },
     "Ethereal Dusk": {
         slider1: "/assets/silestone/espacios/ethereal-dusk-m2.jpg",
@@ -141,6 +206,11 @@ const materials = {
         description:
             "El tono azulado en el interior de cada una de sus vetas le aporta un toque moderno que, sumado a su vanguardista direccionalidad geométrica, hace de Ethereal Dusk uno de los diseños más urbanos y actuales de la colección.",
         chapa: "/assets/silestone/chapas-completas/",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Ether Glow": {
         slider1: "/assets/silestone/espacios/ethereal-glow-m1.jpg",
@@ -149,6 +219,11 @@ const materials = {
         description:
             "Las vetas, en elegantes tonalidades doradas y grises, se funden en un fondo blanco matizado, atravesando la tabla y distribuyendo el color en cada rincón, aportando valor al diseño.",
         chapa: "/assets/silestone/chapas-completas/ethereal-glow-completa.avif",
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Gris Expo": {
         slider1: "/assets/silestone/espacios/gris-expo-m1.jpg",
@@ -157,6 +232,11 @@ const materials = {
         description:
             "Las vetas, en elegantes tonalidades doradas y grises, se funden en un fondo blanco matizado, atravesando la tabla y distribuyendo el color en cada rincón, aportando valor al diseño.",
         chapa: "/assets/silestone/chapas-completas/gris-expo-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 4,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Gris Marengo": {
         slider1: "/assets/silestone/espacios/marengo-m1.jpg",
@@ -165,6 +245,11 @@ const materials = {
         description:
             "La filosofía menos es más se cumple con Marengo, un tono en la gama de los grises apagados que se aproxima al negro y es escogido por amantes de la sencillez y el buen gusto.",
         chapa: "/assets/silestone/chapas-completas/gris-marengo-completa.avif",
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Lime Delight": {
         slider1: "/assets/silestone/espacios/lime-delight-m1.jpg",
@@ -173,6 +258,11 @@ const materials = {
         description:
             "Los tonos beige texturizados de Lime Delight son una base versátil para cualquier diseño de interiores, desde espacios tranquilos y puros hasta propuestas más inesperadas. Sus tonos cálidos y luminosos evocan el resplandor de la famosa piedra caliza de Marbella.",
         chapa: "/assets/silestone/chapas-completas/lime-delight-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Miami Vena": {
         slider1: "/assets/silestone/espacios/miami-vena-m1.jpg",
@@ -181,6 +271,11 @@ const materials = {
         description:
             "Diseño neutro en tonos claros veteados sobre una base totalmente blanca.",
         chapa: "/assets/silestone/chapas-completas/miami-vena-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Miami White": {
         slider1: "/assets/silestone/espacios/miami-white-m1.jpg",
@@ -189,6 +284,11 @@ const materials = {
         description:
             "Color clásico, ideal para los amantes de los blancos que proporcionan calidez a los ambientes.",
         chapa: "/assets/silestone/chapas-completas/miami-white-completa.avif",
+        puntajeRayadura: 2,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Negro Stellar": {
         slider1: "/assets/silestone/espacios/negro-stellar-m1.jpg",
@@ -197,6 +297,11 @@ const materials = {
         description:
             "Llamativo juego de luces gracias a los cristales encajados sobre fondo negro intenso.",
         chapa: "/assets/silestone/chapas-completas/negro-stellar-completa.avif",
+        puntajeRayadura: 2,
+        puntajeManchas: 3,
+        puntajeCalor: 1,
+        puntajeImpacto: 4,
+        puntajeUv: 2,
     },
     "Negro Tebas": {
         slider1: "/assets/silestone/espacios/negro-tebas-m1.jpg",
@@ -205,6 +310,11 @@ const materials = {
         description:
             "Gracias a la tecnología N-Boost este negro luce impoluto y brillante, sin impurezas, ni vetas. Solo el negro más puro y cautivador.",
         chapa: "/assets/silestone/chapas-completas/negro-tebas-completa.avif",
+        puntajeRayadura: 2,
+        puntajeManchas: 3,
+        puntajeCalor: 2,
+        puntajeImpacto: 4,
+        puntajeUv: 2,
     },
     Niebla: {
         slider1: "/assets/silestone/espacios/niebla-m1.jpg",
@@ -213,6 +323,11 @@ const materials = {
         description:
             "Un gris suave propio de las nubes que surcan las colinas en la mañana de una tarde lluviosa, así es Niebla.",
         chapa: "/assets/silestone/chapas-completas/niebla-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     Noka: {
         slider1: "/assets/silestone/espacios/noka-m1.jpg",
@@ -221,6 +336,11 @@ const materials = {
         description:
             "La elegancia y el buen gusto van de la mano de Noka, un básico que querrá integrar en cualquier parte, interior o exterior.",
         chapa: "/assets/silestone/chapas-completas/noka-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Parisien Bleu": {
         slider1: "/assets/silestone/espacios/parisien-bleu-m1.jpg",
@@ -229,6 +349,11 @@ const materials = {
         description:
             "Un profundo tono azulado con fuerte personalidad y poderoso carácter. Su majestuoso fondo, inspirado en las tonalidades de las famosas piedras de la Roma Imperial, se salpica con finas vetas e incrustaciones en tonos ocres.",
         chapa: "/assets/silestone/chapas-completas/parisien-bleu-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 2,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Pearl Jasmine": {
         slider1: "/assets/silestone/espacios/pearl-jasmine-m1.jpg",
@@ -237,6 +362,11 @@ const materials = {
         description:
             "Con un aspecto de piedra caliza blanca y cubierto con sutiles vetas grises, crea un impresionante efecto de grietas. Este modelo combina perfectamente con una cocina clásica ó rural y aquellas que pretenden recrear un leve sentido de la tradición.",
         chapa: "/assets/silestone/chapas-completas/pearl-jasmine-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Posidonia Green": {
         slider1: "/assets/silestone/espacios/posidonia-green-m1.jpg",
@@ -245,6 +375,11 @@ const materials = {
         description:
             "Un verde sereno, lleno de luz que ilumina con elegancia los espacios y ofrece armonía a cualquier estancia.",
         chapa: "/assets/silestone/chapas-completas/posidonia-green-completa.avif",
+        puntajeRayadura: 2,
+        puntajeManchas: 3,
+        puntajeCalor: 2,
+        puntajeImpacto: 4,
+        puntajeUv: 2,
     },
     "Romantic Ash": {
         slider1: "/assets/silestone/espacios/romantic-ash-m1.jpg",
@@ -253,6 +388,11 @@ const materials = {
         description:
             "Grandes vetas e incrustaciones de grano de diversos tamaños recuerdan a la vía láctea en un cielo estrellado. El azul de su fondo refuerza la profundidad de Romantic Ash.",
         chapa: "/assets/silestone/chapas-completas/romantic-ash-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 2,
+        puntajeImpacto: 4,
+        puntajeUv: 2,
     },
     Rougui: {
         slider1: "/assets/silestone/espacios/rougui-m1.jpg",
@@ -261,6 +401,11 @@ const materials = {
         description:
             "Su intensidad y diseño aportarán a cualquier ambiente toda la fuerza y viveza para convertirse en un lugar mágico y acogedor.",
         chapa: "/assets/silestone/chapas-completas/rogui-completa.avif",
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
     },
     "Victorian Silver": {
         slider1: "/assets/silestone/espacios/victorian-silver-m1.jpg",
@@ -269,6 +414,11 @@ const materials = {
         description:
             "Suave y sutil jaspeado bicolor en el fondo con efectos degradados y gran profundidad. El tono frío del fondo se mezcla con sus vetas plateadas y grises oscuras para crear un color elegante que encaja a la perfección con tonos cálidos y fríos. Victorian Silver encarna el encanto de la historia. Sumérjete en el mundo victoriano de la elegancia y la sofisticación, donde cada momento es un tesoro atemporal.",
         chapa: "/assets/silestone/chapas-completas/victorian-silver-completa.avif",
+        puntajeRayadura: 2,
+        puntajeManchas: 3,
+        puntajeCalor: 2,
+        puntajeImpacto: 4,
+        puntajeUv: 2,
     },
 };
 
@@ -276,6 +426,11 @@ const { material } = Astro.params;
 
 const materialData = materials[material];
 export const prerender = true;
+const puntajeRayadura = materialData.puntajeRayadura;
+const puntajeManchas = materialData.puntajeManchas;
+const puntajeCalor = materialData.puntajeCalor;
+const puntajeImpacto = materialData.puntajeImpacto;
+const puntajeUv = materialData.puntajeUv;
 ---
 
 <Layout title={material} description={materialData.description}>
@@ -410,6 +565,173 @@ export const prerender = true;
                         <h2 class="text-xl font-semibold mb-4 text-left">
                             Detalles Adicionales
                         </h2>
+                        <div
+                            class="contenedor grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:mr-24"
+                        >
+                            <!-- Columna 1 -->
+                            <div class="columna text-center">
+                                <img
+                                    src={Rayadura.src}
+                                    alt="Descripción de la imagen 1"
+                                    class="mx-auto mb-2 w-12 h-12 object-cover"
+                                />
+                                <p>Recistencia a Rayaduras</p>
+                                <div class="puntaje">
+                                    <div
+                                        class={`circulo ${puntajeRayadura >= 1 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+
+                                    <div
+                                        class={`circulo ${puntajeRayadura >= 2 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeRayadura >= 3 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeRayadura >= 4 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeRayadura >= 5 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columna text-center">
+                                <img
+                                    src={Mancha.src}
+                                    alt="Descripción de la imagen 2"
+                                    class="mx-auto mb-2 w-12 h-12 object-cover"
+                                />
+                                <p>Resisentencia a Manchas</p>
+                                <div class="puntaje">
+                                    <div
+                                        class={`circulo ${puntajeManchas >= 1 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+
+                                    <div
+                                        class={`circulo ${puntajeManchas >= 2 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeManchas >= 3 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeManchas >= 4 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeManchas >= 5 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Columna 3 -->
+                            <div class="columna text-center">
+                                <img
+                                    src={Calor.src}
+                                    alt="Descripción de la imagen 3"
+                                    class="mx-auto mb-2 w-12 h-12 object-cover"
+                                />
+                                <p>Resistencia al Calor</p>
+                                <div class="puntaje">
+                                    <div
+                                        class={`circulo ${puntajeCalor >= 1 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+
+                                    <div
+                                        class={`circulo ${puntajeCalor >= 2 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeCalor >= 3 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeCalor >= 4 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeCalor >= 5 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Columna 4 -->
+                            <div class="columna text-center">
+                                <img
+                                    src={Golpe.src}
+                                    alt="Descripción de la imagen 4"
+                                    class="mx-auto mb-2 w-12 h-12 object-cover"
+                                />
+                                <p>Recistencia al impacto</p>
+                                <div class="puntaje">
+                                    <div
+                                        class={`circulo ${puntajeImpacto >= 1 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+
+                                    <div
+                                        class={`circulo ${puntajeImpacto >= 2 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeImpacto >= 3 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeImpacto >= 4 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeImpacto >= 5 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Columna 5 -->
+                            <div class="columna text-center">
+                                <img
+                                    src={uv.src}
+                                    alt="Descripción de la imagen 5"
+                                    class="mx-auto mb-2 w-12 h-12 object-cover"
+                                />
+                                <p>Recistencia a Exteriores</p>
+                                <div class="puntaje">
+                                    <div
+                                        class={`circulo ${puntajeUv >= 1 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+
+                                    <div
+                                        class={`circulo ${puntajeUv >= 2 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeUv >= 3 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeUv >= 4 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                    <div
+                                        class={`circulo ${puntajeUv >= 5 ? "circulo lleno" : ""}`}
+                                    >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p>{materialData.additionalDetails}</p>
                     </section>
                 </div>
@@ -477,6 +799,19 @@ export const prerender = true;
     </script>
 
     <style>
+        .circulo {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #000; /* Borde negro */
+            margin: 2px; /* Espacio entre círculos */
+            display: inline-block;
+        }
+
+        .circulo.lleno {
+            background-color: gray; /* Color de fondo gris */
+        }
+
         #zoomCircle {
             width: 200px;
             height: 200px;
