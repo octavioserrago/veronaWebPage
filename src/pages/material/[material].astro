@@ -417,11 +417,7 @@ export const prerender = true;
             <div class="chapaC w-full p-4 mb-8 lg:pl-32 lg:pr-32">
                 <h2
                     class="text-2xl text-left pb-2 font-normal"
-                    style="font-family:San
-                    Francisco
-                    Display
-                    Ultralight"
-                    ;
+                    style="font-family:San Francisco Display Ultralight;"
                 >
                     Detalles de la tabla completa {material}
                 </h2>
@@ -488,6 +484,12 @@ export const prerender = true;
             border: 1px solid #000;
             box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85);
             background-size: 100% 100%;
+        }
+
+        @media (max-width: 640px) {
+            #zoomCircle {
+                display: none;
+            }
         }
     </style>
 </Layout>

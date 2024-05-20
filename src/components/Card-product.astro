@@ -11,7 +11,8 @@ const { title, image, href } = Astro.props;
 <li class="link-card transform transition duration-300 hover:scale-105">
     <a href={href} class="block">
         <img
-            class="h-32 w-auto rounded-lg shadow-2xl shadow-gray-400"
+            class="h-32 w-full md:w-full lg:w-auto rounded-lg shadow-2xl shadow-gray-400"
+            style="object-fit: cover;"
             src={image}
             alt={title}
         />
