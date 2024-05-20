@@ -7,6 +7,7 @@ import Calor from "../../../public/assets/calor.png";
 import Golpe from "../../../public/assets/pegar.png";
 import Mancha from "../../../public/assets/mancha.png";
 import uv from "../../../public/assets/ultravioleta.png";
+import Silestone from "../silestone.astro";
 
 export function getStaticPaths() {
     return [
@@ -39,11 +40,14 @@ export function getStaticPaths() {
         { params: { material: "Romantic Ash" } },
         { params: { material: "Rougui" } },
         { params: { material: "Victorian Silver" } },
+        { params: { material: "Amarello" } },
     ];
 }
 
 const materials = {
     "Et Marquina": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/marquina-m1.jpg",
         slider2: "/assets/silestone/espacios/marquina-m2.jpg",
         slider3: "/assets/silestone/espacios/marquina-m3.jpg",
@@ -57,6 +61,8 @@ const materials = {
         puntajeUv: 2,
     },
     "Arcilla Red": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/arcilla-red-m1.jpg",
         slider2: "/assets/silestone/espacios/arcilla-red-m2.jpg",
         slider3: "/assets/silestone/espacios/arcilla-red-m1.jpg",
@@ -70,6 +76,8 @@ const materials = {
         puntajeUv: 2,
     },
     "Blanco Norte": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/blanco-norte-m2.png",
         slider2: "/assets/silestone/Silestone-Blanco-norte.jpg",
         slider3: "/assets/silestone/espacios/blanco-norte-m3.png",
@@ -83,6 +91,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Blanco Stellar": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/blanco-stellar-m1.jpg",
         slider2: "/assets/silestone/espacios/blanco-stellar-m2.jpg",
         slider3: "/assets/silestone/Silestone-blanco-stellar.jpg",
@@ -96,6 +106,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Blanco Zeus": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/blanco-zeus-m1.jpg",
         slider2: "/assets/silestone/espacios/blanco-zeus-m2.jpg",
         slider3: "/assets/silestone/espacios/blanco-zeus-m3.jpg",
@@ -109,6 +121,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Bohemian Flame": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/bohemian-flame-m1.jpg",
         slider2: "/assets/silestone/espacios/bohemian-flare-m2.jpg",
         slider3: "/assets/silestone/espacios/bohemian-flame-m3.jpg",
@@ -122,6 +136,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Brass Relish": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/brass-relish-m1.jpg",
         slider2: "/assets/silestone/espacios/brass-relish-m2.jpg",
         slider3: "/assets/silestone/espacios/brass-relish-m3.jpg",
@@ -135,6 +151,8 @@ const materials = {
         puntajeUv: 2,
     },
     "Cala Blue": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/cala-blue-m1.jpg",
         slider2: "/assets/silestone/espacios/cala-blue-m2.jpg",
         slider3: "/assets/silestone/Silestone-calablue.jpg",
@@ -148,6 +166,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Calacatta Gold": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/calacatta-gold-m1.jpg",
         slider2: "/assets/silestone/espacios/calacatta-gold-m2.jpg",
         slider3: "/assets/silestone/Silestone-Calacatta-gold.jpg",
@@ -161,6 +181,8 @@ const materials = {
         puntajeUv: 3,
     },
     Charcoal: {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/charcoal-m1.jpg",
         slider2: "/assets/silestone/espacios/charcoal-m2.jpeg",
         slider3: "/assets/silestone/Silestone-Charcoal.jpg",
@@ -174,6 +196,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Concrete Pulse": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/concrete-pulse-m1.jpg",
         slider2: "/assets/silestone/espacios/concrete-pulse-m3.jpg",
         slider3: "/assets/silestone/Silestone-concrete-pulse.jpg",
@@ -187,6 +211,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Et Noir": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/et-noir-m1.jpg",
         slider2: "/assets/silestone/espacios/et-noir-m3.jpg",
         slider3: "/assets/silestone/Silestone-et.noir.jpg",
@@ -200,6 +226,8 @@ const materials = {
         puntajeUv: 2,
     },
     "Ethereal Dusk": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/ethereal-dusk-m2.jpg",
         slider2: "/assets/silestone/espacios/ethereal-dusk-m3.jpg",
         slider3: "/assets/silestone/Silestone-ethereal-dusk.jpg",
@@ -213,6 +241,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Ether Glow": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/ethereal-glow-m1.jpg",
         slider2: "/assets/silestone/espacios/ethereal-glow-m2.jpg",
         slider3: "/assets/silestone/espacios/ethereal-glow-m3.jpg",
@@ -226,6 +256,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Gris Expo": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/gris-expo-m1.jpg",
         slider2: "/assets/silestone/espacios/gris-expo-m2.jpeg",
         slider3: "/assets/silestone/Silestone-Gris-Expo.png",
@@ -239,6 +271,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Gris Marengo": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/marengo-m1.jpg",
         slider2: "/assets/silestone/espacios/gris-marengo-m2.jpg",
         slider3: "/assets/silestone/Silestone-gris-marengo.jpg",
@@ -252,6 +286,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Lime Delight": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/lime-delight-m1.jpg",
         slider2: "/assets/silestone/espacios/lime-delight-m2.jpg",
         slider3: "/assets/silestone/Silestone-Lime-delight.jpg",
@@ -265,6 +301,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Miami Vena": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/miami-vena-m1.jpg",
         slider2: "/assets/silestone/espacios/miami-vena-m1.jpg",
         slider3: "/assets/silestone/Silestone-miamiVena.jpg",
@@ -278,6 +316,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Miami White": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/miami-white-m1.jpg",
         slider2: "/assets/silestone/espacios/miami-white-m2.jpg",
         slider3: "/assets/silestone/Silestone-miamiwhite.jpg",
@@ -291,6 +331,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Negro Stellar": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/negro-stellar-m1.jpg",
         slider2: "/assets/silestone/espacios/negro-stellar-m2.jpg",
         slider3: "/assets/silestone/Silestone-negro-stellar.jpg",
@@ -304,6 +346,8 @@ const materials = {
         puntajeUv: 2,
     },
     "Negro Tebas": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/negro-tebas-m1.jpg",
         slider2: "/assets/silestone/espacios/negro-tebas-m2.jpeg",
         slider3: "/assets/silestone/Silestone-negroTebas.jpg",
@@ -317,6 +361,8 @@ const materials = {
         puntajeUv: 2,
     },
     Niebla: {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/niebla-m1.jpg",
         slider2: "/assets/silestone/espacios/niebla-m2.jpg",
         slider3: "/assets/silestone/espacios/niebla-m3.jpg",
@@ -330,6 +376,8 @@ const materials = {
         puntajeUv: 3,
     },
     Noka: {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/noka-m1.jpg",
         slider2: "/assets/silestone/espacios/noka-m2.jpg",
         slider3: "/assets/silestone/Silestone-Noka.jpg",
@@ -343,6 +391,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Parisien Bleu": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/parisien-bleu-m1.jpg",
         slider2: "/assets/silestone/espacios/parisien-bleu-m2.jpg",
         slider3: "/assets/silestone/espacios/parisien-bleu-m3.jpg",
@@ -356,6 +406,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Pearl Jasmine": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/pearl-jasmine-m1.jpg",
         slider2: "/assets/silestone/espacios/pearl-jasmine-m2.jpg",
         slider3: "/assets/silestone/espacios/pearl-jasmine-m3.jpg",
@@ -369,6 +421,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Posidonia Green": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/posidonia-green-m1.jpg",
         slider2: "/assets/silestone/espacios/posidonia-green-m2.jpg",
         slider3: "/assets/silestone/espacios/posidonia-green-m3.jpg",
@@ -382,6 +436,8 @@ const materials = {
         puntajeUv: 2,
     },
     "Romantic Ash": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/romantic-ash-m1.jpg",
         slider2: "/assets/silestone/espacios/romantic-ash-m2.jpg",
         slider3: "/assets/silestone/espacios/romantic-ash-m3.jpg",
@@ -395,6 +451,8 @@ const materials = {
         puntajeUv: 2,
     },
     Rougui: {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/rougui-m1.jpg",
         slider2: "/assets/silestone/espacios/rogui-m2.jpg",
         slider3: "/assets/silestone/Silestone-Rougui.jpg",
@@ -408,6 +466,8 @@ const materials = {
         puntajeUv: 3,
     },
     "Victorian Silver": {
+        material: "Silestone",
+        linkRetorno: "/silestone",
         slider1: "/assets/silestone/espacios/victorian-silver-m1.jpg",
         slider2: "/assets/silestone/espacios/victorian-silver-m2.jpg",
         slider3: "/assets/silestone/espacios/victorian-silver-m3.jpg",
@@ -419,6 +479,21 @@ const materials = {
         puntajeCalor: 2,
         puntajeImpacto: 4,
         puntajeUv: 2,
+    },
+    Amarello: {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/Amarello.jpg",
+        slider2: "/assets/granito/espacios/amarello-m2.jpg",
+        slider3: "/assets/granito/espacios/amarello-m1.jpg",
+        description:
+            "El Amarello brilla con una base de color dorado que irradia luminosidad y sofisticación. Sus vetas y motas en tonos negros, blancos y marrones crean un mosaico natural que añade profundidad y una riqueza visual incomparable, haciendo que cada pieza sea única.",
+        chapa: "/assets/granito/espacios/Amarello-entera.jpg",
+        puntajeRayadura: 4,
+        puntajeManchas: 2,
+        puntajeCalor: 5,
+        puntajeImpacto: 3,
+        puntajeUv: 4,
     },
 };
 
@@ -732,7 +807,6 @@ const puntajeUv = materialData.puntajeUv;
                                 </div>
                             </div>
                         </div>
-                        <p>{materialData.additionalDetails}</p>
                     </section>
                 </div>
             </section>
@@ -757,11 +831,14 @@ const puntajeUv = materialData.puntajeUv;
                     >
                     </div>
                 </div>
-                <a href="/silestone">
+
+                <a href={materialData.linkRetorno}>
                     <p
                         class="text-center text-xl hover:underline pt-8 hover:text-yellow-500"
                     >
-                        <i class="fa-solid fa-reply"></i> Volver al catalogo de Silestone
+                        <i class="fa-solid fa-reply"></i> Volver al catalogo de {
+                            materialData.material
+                        }
                     </p>
                 </a>
             </div>
