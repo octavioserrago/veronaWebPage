@@ -7,7 +7,6 @@ import Calor from "../../../public/assets/calor.png";
 import Golpe from "../../../public/assets/pegar.png";
 import Mancha from "../../../public/assets/mancha.png";
 import uv from "../../../public/assets/ultravioleta.png";
-import Silestone from "../silestone.astro";
 
 export function getStaticPaths() {
     return [
@@ -47,6 +46,13 @@ export function getStaticPaths() {
         { params: { material: "Delicatus" } },
         { params: { material: "Gris Mara" } },
         { params: { material: "Gris Perla Salmón" } },
+        { params: { material: "Gris Perla" } },
+        { params: { material: "Marrón Absoluto" } },
+        { params: { material: "Marrón Café" } },
+        { params: { material: "Marrón Coco" } },
+        { params: { material: "Negro Boreal Dorado" } },
+        { params: { material: "Negro Boreal" } },
+        { params: { material: "Negro Brasil" } },
     ];
 }
 
@@ -504,7 +510,7 @@ const materials = {
     "Azul Labrador": {
         material: "Granitos",
         linkRetorno: "/granitos",
-        slider1: "/assets/granito/Azul-Labrador.jpg",
+        slider1: "/assets/granito/espacios/Azul-Labrador.jpg",
         slider2: "/assets/granito/espacios/Azul-Labrador-m2.jpg",
         slider3: "/assets/granito/espacios/Azul-Labrador-m1.jpg",
         description:
@@ -591,6 +597,126 @@ const materials = {
         puntajeImpacto: 4,
         puntajeUv: 4,
     },
+    "Gris Perla": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/espacios/Gris-Perla-m1.jpg",
+        slider2: "/assets/granito/espacios/Gris-Perla-m2.jpg",
+        slider3: "/assets/granito/Gris-Perla.jpg",
+        description:
+            "El gris perla es una tonalidad de gris conocida por su aspecto suave y delicado. Se sitúa en un punto intermedio entre el gris claro y el gris medio, distinguiéndose por un matiz ligeramente cálido. Al igual que las perlas, comparte la misma luminosidad y un brillo sutil.",
+        chapa: "/assets/granito/espacios/Gris-Perla-Completa.jpeg",
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 4,
+    },
+    "Marrón Absoluto": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/espacios/Marron-Absoluto-m2.jpg",
+        slider2: "/assets/granito/espacios/Marron-Absoluto-m1.jpeg",
+        slider3: "/assets/granito/Marron-Absoluto.jpg",
+        description:
+            "El gris perla es una tonalidad de gris conocida por su aspecto suave y delicado. Se sitúa en un punto intermedio entre el gris claro y el gris medio, distinguiéndose por un matiz ligeramente cálido. Al igual que las perlas, comparte la misma luminosidad y un brillo sutil.",
+        chapa: "/assets/granito/espacios/Marron-Absoluto-Completa.jpg",
+        puntajeRayadura: 4,
+        puntajeManchas: 3,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 4,
+    },
+    "Marrón Café": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/espacios/Marron-Cafe-m2.jpg",
+        slider2: "/assets/granito/espacios/Marron-Cafe-m1.jpg",
+        slider3: "/assets/granito/Marron-Cafe.jpg",
+        description:
+            "El Granito Marrón Café es una piedra natural que combina la calidez de los tonos marrones con la durabilidad y resistencia del granito.",
+        chapa: "/assets/granito/espacios/Marron-Cafe-Completa.jpg",
+        puntajeRayadura: 2,
+        puntajeManchas: 3,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 4,
+    },
+    "Marrón Coco": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/espacios/Marron-Coco-m1.jpg",
+        slider2: "/assets/granito/espacios/Marron-Coco-m2.jpeg",
+        slider3: "/assets/granito/Marron-Coco.jpg",
+        description:
+            "El Granito Marrón Café es una piedra natural que combina la calidez de los tonos marrones con la durabilidad y resistencia del granito.",
+        chapa: "/assets/granito/espacios/Marron-Coco-Completa.jpg",
+        puntajeRayadura: 2,
+        puntajeManchas: 3,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 4,
+    },
+    "Marrón Orcollano": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/espacios/Marron-Coco-m1.jpg",
+        slider2: "/assets/granito/espacios/Marron-Coco-m2.jpeg",
+        slider3: "/assets/granito/Marron-Coco.jpg",
+        description:
+            "El Granito Marrón Café es una piedra natural que combina la calidez de los tonos marrones con la durabilidad y resistencia del granito.",
+        chapa: "/assets/granito/espacios/Marron-Coco-Completa.jpg",
+        puntajeRayadura: 2,
+        puntajeManchas: 3,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 4,
+    },
+    "Negro Boreal Dorado": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/espacios/NBD-m1.png",
+        slider2: "/assets/granito/espacios/NBD-m2.png",
+        slider3: "/assets/granito/espacios/NBD-m3.png",
+        description:
+            "Negro Boreal con Dorado, también conocido como Black Cosmic, es un granito exclusivo que combina elegancia y misterio. Su superficie pulida brilla como un espectáculo astral, con detalles dorados y plateados. ",
+        chapa: "/assets/granito/espacios/Negro-Boreal-Dorado-Completa.jpg",
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 4,
+    },
+    "Negro Boreal": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/espacios/Negro-Boreal-m1.jpg",
+        slider2: "/assets/granito/espacios/Negro-Boreal-m2.jpg",
+        slider3: "/assets/granito/Negro-Boreal.jpg",
+        description:
+            "El Granito Negro Boreal tiene un fondo negro con nubes y detalles blancos, lo que le confiere un aspecto poco común. Es resistente al rayado, duradero y se utiliza ampliamente en mesadas de cocinas, baños, revestimientos y pisos.",
+        chapa: "/assets/granito/espacios/Negro-Boreal-Completa.jpg",
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 4,
+    },
+    "Negro Brasil": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/Negro-Brasil.jpg",
+        slider2: "/assets/granito/espacios/Negro-brasil-m1.jpg",
+        slider3: "/assets/granito/espacios/Negro-brasil-m2.jpg",
+        description:
+            "El Granito Negro Boreal tiene un fondo negro con nubes y detalles blancos, lo que le confiere un aspecto poco común. Es resistente al rayado, duradero y se utiliza ampliamente en mesadas de cocinas, baños, revestimientos y pisos.",
+        chapa: "/assets/granito/espacios/Negro-Brasil-Completa.jpg",
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 4,
+    },
 };
 
 const { material } = Astro.params;
@@ -639,7 +765,7 @@ const puntajeUv = materialData.puntajeUv;
                                     alt="..."
                                 />
                             </div>
-                            <!-- Item 3 -->
+
                             <div
                                 class="hidden duration-700 ease-in-out"
                                 data-carousel-item
@@ -739,7 +865,6 @@ const puntajeUv = materialData.puntajeUv;
                         <div
                             class="contenedor grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:mr-24"
                         >
-                            <!-- Columna 1 -->
                             <div class="columna text-center">
                                 <img
                                     src={Rayadura.src}
@@ -804,7 +929,6 @@ const puntajeUv = materialData.puntajeUv;
                                 </div>
                             </div>
 
-                            <!-- Columna 3 -->
                             <div class="columna text-center">
                                 <img
                                     src={Calor.src}
@@ -837,7 +961,6 @@ const puntajeUv = materialData.puntajeUv;
                                 </div>
                             </div>
 
-                            <!-- Columna 4 -->
                             <div class="columna text-center">
                                 <img
                                     src={Golpe.src}
@@ -870,7 +993,6 @@ const puntajeUv = materialData.puntajeUv;
                                 </div>
                             </div>
 
-                            <!-- Columna 5 -->
                             <div class="columna text-center">
                                 <img
                                     src={uv.src}
@@ -976,13 +1098,13 @@ const puntajeUv = materialData.puntajeUv;
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            border: 1px solid #000; /* Borde negro */
-            margin: 2px; /* Espacio entre círculos */
+            border: 1px solid #000;
+            margin: 2px;
             display: inline-block;
         }
 
         .circulo.lleno {
-            background-color: gray; /* Color de fondo gris */
+            background-color: gray;
         }
 
         #zoomCircle {
