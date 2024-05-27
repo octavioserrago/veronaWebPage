@@ -56,6 +56,8 @@ export function getStaticPaths() {
         { params: { material: "Negro Zulú" } },
         { params: { material: "Rojo Dragón" } },
         { params: { material: "Rojo Multicolor" } },
+        { params: { material: "Rosa del Salto" } },
+        { params: { material: "San Felipe" } },
     ];
 }
 
@@ -543,9 +545,9 @@ const materials = {
     "Blanco Siena": {
         material: "Granitos",
         linkRetorno: "/granitos",
-        slider1: "/assets/granito/Blanco-Siena.jpg",
-        slider2: "/assets/granito/espacios/Blanco-Siena-m1.jpg",
-        slider3: "/assets/granito/espacios/Blanco-Siena-m2.jpg",
+        slider1: "/assets/granito/espacios/Blanco-Siena-m1.jpg",
+        slider2: "/assets/granito/espacios/Blanco-Siena-m2.jpg",
+        slider3: "/assets/granito/Blanco-Siena.jpg",
         description:
             "Blanco Siena es una opción popular para encimeras de cocina gracias a su color claro y versatilidad. Con un fondo blanquecino salpicado de pequeñas manchas rosadas o grises, cada losa ofrece un aspecto único. Originario de la región brasileña de Itaúnas, este granito combina fácilmente con muebles blancos y de madera, aportando luminosidad y elegancia a cualquier espacio. Su durabilidad y fácil mantenimiento lo convierten en una elección atemporal para cualquier cocina.",
         chapa: "/assets/granito/espacios/Blanco-Siena-Completa.jpg",
@@ -738,9 +740,9 @@ const materials = {
     "Rojo Dragón": {
         material: "Granitos",
         linkRetorno: "/granitos",
-        slider1: "/assets/granito/Rojo-Dragon.jpg",
-        slider2: "/assets/granito/espacios/Rojo-Dragon-m1.jpg",
-        slider3: "/assets/granito/Rojo-Dragon.jpg",
+        slider1: "/assets/granito/espacios/Rojo-Dragon-m1.jpeg",
+        slider2: "/assets/granito/espacios/Rojo-Dragon-m2.jpeg",
+        slider3: "/assets/granito/espacios/Rojo-Dragon-m3.jpeg",
         description:
             "Descubre la belleza y resistencia del Granito Rojo Dragón. Nuestra piedra natural, con su color rojo intenso y pequeñas vetas negras, es perfecta para tus proyectos de diseño de interiores y exteriores.",
         chapa: "/assets/granito/espacios/Rojo-Dragon-Completa.jpg",
@@ -764,6 +766,36 @@ const materials = {
         puntajeCalor: 5,
         puntajeImpacto: 4,
         puntajeUv: 4,
+    },
+    "Rosa del Salto": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/Rosa-del-Salto.jpg",
+        slider2: "/assets/granito/espacios/Rosa-de-salto-m1.jpg",
+        slider3: "/assets/granito/Rosa-del-Salto.jpg",
+        description:
+            "Descubre la elegancia y durabilidad del granito Rosa del Salto, una piedra natural exclusiva de Argentina. Con sus encantadores tonos rosados y grises, este granito es perfecto para transformar cualquier espacio, desde encimeras hasta paisajismo exterior.",
+        chapa: "/assets/granito/espacios/Rosa-Salto-Completa.jpg",
+        puntajeRayadura: 4,
+        puntajeManchas: 5,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 5,
+    },
+    "San Felipe": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/San-Felipe.jpg",
+        slider2: "/assets/granito/espacios/San-Felipe-m2.jpg",
+        slider3: "/assets/granito/San-Felipe.jpg",
+        description:
+            "Descubre la elegancia y durabilidad del granito Rosa del Salto, una piedra natural exclusiva de Argentina. Con sus encantadores tonos rosados y grises, este granito es perfecto para transformar cualquier espacio, desde encimeras hasta paisajismo exterior.",
+        chapa: "/assets/granito/espacios/San-Felipe-Completa.jpg",
+        puntajeRayadura: 4,
+        puntajeManchas: 5,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 5,
     },
 };
 
@@ -919,7 +951,7 @@ const puntajeUv = materialData.puntajeUv;
                                     alt="Descripción de la imagen 1"
                                     class="mx-auto mb-2 w-12 h-12 object-cover"
                                 />
-                                <p>Recistencia a Rayaduras</p>
+                                <p>Resistencia a Rayaduras</p>
                                 <div class="puntaje">
                                     <div
                                         class={`circulo ${puntajeRayadura >= 1 ? "circulo lleno" : ""}`}
@@ -951,7 +983,7 @@ const puntajeUv = materialData.puntajeUv;
                                     alt="Descripción de la imagen 2"
                                     class="mx-auto mb-2 w-12 h-12 object-cover"
                                 />
-                                <p>Resisentencia a Manchas</p>
+                                <p>Resistencia a Manchas</p>
                                 <div class="puntaje">
                                     <div
                                         class={`circulo ${puntajeManchas >= 1 ? "circulo lleno" : ""}`}
@@ -1015,7 +1047,7 @@ const puntajeUv = materialData.puntajeUv;
                                     alt="Descripción de la imagen 4"
                                     class="mx-auto mb-2 w-12 h-12 object-cover"
                                 />
-                                <p>Recistencia al impacto</p>
+                                <p>Resistencia al impacto</p>
                                 <div class="puntaje">
                                     <div
                                         class={`circulo ${puntajeImpacto >= 1 ? "circulo lleno" : ""}`}
@@ -1047,7 +1079,7 @@ const puntajeUv = materialData.puntajeUv;
                                     alt="Descripción de la imagen 5"
                                     class="mx-auto mb-2 w-12 h-12 object-cover"
                                 />
-                                <p>Recistencia a Exteriores</p>
+                                <p>Resistencia a Exteriores</p>
                                 <div class="puntaje">
                                     <div
                                         class={`circulo ${puntajeUv >= 1 ? "circulo lleno" : ""}`}
