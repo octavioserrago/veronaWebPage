@@ -61,6 +61,9 @@ export function getStaticPaths() {
         { params: { material: "Sierra Chica" } },
         { params: { material: "Verde Acuario" } },
         { params: { material: "Verde Butterfly" } },
+        { params: { material: "Verde San Francisco" } },
+        { params: { material: "Verde Ubatuba" } },
+        { params: { material: "Vía Láctea" } },
     ];
 }
 
@@ -808,7 +811,7 @@ const materials = {
         slider3: "/assets/granito/espacios/Sierra-Chica-m2.jpg",
         description:
             "una piedra natural que captura la esencia de la tierra argentina con su profundo color rojo salpicado de intrincados patrones negros y blancos. Perfecto para encimeras, suelos y revestimientos, el Granito Sierra Chica no solo añade un toque de elegancia a cualquier espacio, sino que también ofrece una durabilidad inigualable y resistencia a las manchas y al desgaste. Elige Sierra Chica para un acabado que combina belleza eterna y funcionalidad robusta.",
-        chapa: "/assets/granito/espacios/San-Felipe-Completa.jpg",
+        chapa: "/assets/granito/espacios/Sierra-Chica-Completa.jpg",
         puntajeRayadura: 4,
         puntajeManchas: 5,
         puntajeCalor: 5,
@@ -833,12 +836,57 @@ const materials = {
     "Verde Butterfly": {
         material: "Granitos",
         linkRetorno: "/granitos",
-        slider1: "/assets/granito/Verde-Acuario.jpg",
-        slider2: "/assets/granito/espacios/Verde-Acuario-m1.jpg",
-        slider3: "/assets/granito/espacios/Verde-Acuario-m2.jpg",
+        slider1: "/assets/granito/Verde-Butterfly.jpg",
+        slider2: "/assets/granito/espacios/Verde-Butterfly-m1.jpg",
+        slider3: "/assets/granito/espacios/Verde-Butterfly-m2.jpg",
         description:
-            "Transforma tus espacios con el granito Verde Butterfly, una obra maestra de la naturaleza proveniente de Brasil. Con su fascinante mezcla de verdes profundos, grises sutiles y toques de blanco y negro, este granito no solo añade un toque de lujo a tus superficies, sino que también brinda una durabilidad incomparable",
+            "El granito Verde Butterfly es una piedra natural de origen ígneo que se caracteriza por su tonalidad verde oscuro con vetas blancas y negras que le dan un aspecto similar a las alas de una mariposa.",
         chapa: "/assets/granito/espacios/Verde-Butterfly-Completa.jpeg",
+        puntajeRayadura: 4,
+        puntajeManchas: 5,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 5,
+    },
+    "Verde San Francisco": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/Verde-San-Francisco.jpg",
+        slider2: "/assets/granito/espacios/Verde-San-Francisco-m1.jpg",
+        slider3: "/assets/granito/espacios/Verde-San-Francisco-m2.jpg",
+        description:
+            "Descubre la elegancia del granito Verde San Francisco, una piedra natural brasileña que combina tonos verdes profundos con vetas negras y blancas. Ideal para encimeras, revestimientos y aplicaciones exteriores, este granito ofrece una durabilidad excepcional y una estética sofisticada. Perfecto para añadir un toque de lujo y resistencia a cualquier proyecto de diseño.",
+        chapa: "/assets/granito/espacios/Verde-San-Francisco-Completa.jpg",
+        puntajeRayadura: 4,
+        puntajeManchas: 5,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 5,
+    },
+    "Verde Ubatuba": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/espacios/Verde-Ubatuba-m1.jpg",
+        slider2: "/assets/granito/espacios/Verde-Ubatuba-m2.jpg",
+        slider3: "/assets/granito/espacios/Verde-Ubatuba-m3.jpg",
+        description:
+            "El granito Verde Ubatuba de elegante y exótica apariencia, es de color verde oscuro con pequeñas motas de blanco, y marrón. Originario de Brasil, es muy popular para encimeras de cocina, pisos y paredes debido a su durabilidad, resistencia a las manchas y al calor.",
+        chapa: "/assets/granito/espacios/Verde-Ubatuba-Completa.jpg",
+        puntajeRayadura: 4,
+        puntajeManchas: 5,
+        puntajeCalor: 5,
+        puntajeImpacto: 4,
+        puntajeUv: 5,
+    },
+    "Vía Láctea": {
+        material: "Granitos",
+        linkRetorno: "/granitos",
+        slider1: "/assets/granito/Via-Lactea.jpg",
+        slider2: "/assets/granito/espacios/Via-Lactea-m1.jpg",
+        slider3: "/assets/granito/espacios/Via-Lactea-m2.jpg",
+        description:
+            "El granito Vía Láctea es una joya de la naturaleza, cuyo nombre evoca la majestuosidad y el misterio del cosmos. Este granito, originario de Brasil, presenta una base negra profunda con delicadas vetas blancas que se asemejan a la Vía Láctea, creando un efecto visual impresionante y elegante. Perfecto para encimeras, pisos y revestimientos de paredes, el Vía Láctea combina durabilidad y estilo, aportando un toque de sofisticación a cualquier espacio​ ",
+        chapa: "/assets/granito/espacios/Via-Lactea-Completa.jpg",
         puntajeRayadura: 4,
         puntajeManchas: 5,
         puntajeCalor: 5,
@@ -985,7 +1033,7 @@ const puntajeUv = materialData.puntajeUv;
             <section class="w-full md:w-1/2 p-4">
                 <div>
                     <h1 class="text-3xl font-bold mb-4">{material}</h1>
-                    <p>{materialData.description}</p>
+                    <p class="lg:pr-32">{materialData.description}</p>
                     <section class="w-full pt-4">
                         <h2 class="text-xl font-semibold mb-4 text-left">
                             Detalles Adicionales
