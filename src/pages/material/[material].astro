@@ -50,6 +50,7 @@ export function getStaticPaths() {
         { params: { material: "Marrón Absoluto" } },
         { params: { material: "Marrón Café" } },
         { params: { material: "Marrón Coco" } },
+        { params: { material: "Marrón Orcollano" } },
         { params: { material: "Negro Boreal Dorado" } },
         { params: { material: "Negro Boreal" } },
         { params: { material: "Negro Brasil" } },
@@ -64,6 +65,7 @@ export function getStaticPaths() {
         { params: { material: "Verde San Francisco" } },
         { params: { material: "Verde Ubatuba" } },
         { params: { material: "Vía Láctea" } },
+        { params: { material: "Blanco Paloma" } },
     ];
 }
 
@@ -600,7 +602,7 @@ const materials = {
         slider2: "/assets/granito/espacios/Gris-Perla-m1.jpg",
         slider3: "/assets/granito/Gris-Perla-Salmon.jpg",
         description:
-            "Gris Mara, una roca ígnea de tonalidad neutra y sofisticada. Con su mezcla única de finos granos blancos y negros, este material es sinónimo de resistencia y durabilidad. Este granito no solo garantiza funcionalidad, sino que también aporta un toque de distinción y estilo atemporal a cualquier espacio.",
+            "El granito gris perla salmón combina un elegante fondo gris perlado con distintivas vetas salmón, creando un aspecto sofisticado y único. Su durabilidad y resistencia lo hacen ideal para encimeras, suelos y revestimientos, añadiendo un toque de lujo a cualquier espacio. Perfecto para proyectos modernos y clásicos, este granito es una elección atemporal.",
         chapa: "/assets/granito/espacios/Gris-Perla-Salmon-Completa.jpg",
         puntajeRayadura: 4,
         puntajeManchas: 4,
@@ -630,7 +632,7 @@ const materials = {
         slider2: "/assets/granito/espacios/Marron-Absoluto-m1.jpeg",
         slider3: "/assets/granito/Marron-Absoluto.jpg",
         description:
-            "El gris perla es una tonalidad de gris conocida por su aspecto suave y delicado. Se sitúa en un punto intermedio entre el gris claro y el gris medio, distinguiéndose por un matiz ligeramente cálido. Al igual que las perlas, comparte la misma luminosidad y un brillo sutil.",
+            "Este granito es una exquisita combinación de marrones y negros con pequeñas manchas de gris claro bronceado. Su apariencia cambia desde tonos sepia negros hasta oscuros, lo que le otorga una belleza única y una sensación de profundidad.",
         chapa: "/assets/granito/espacios/Marron-Absoluto-Completa.jpg",
         puntajeRayadura: 4,
         puntajeManchas: 3,
@@ -660,7 +662,7 @@ const materials = {
         slider2: "/assets/granito/espacios/Marron-Coco-m2.jpeg",
         slider3: "/assets/granito/Marron-Coco.jpg",
         description:
-            "El Granito Marrón Café es una piedra natural que combina la calidez de los tonos marrones con la durabilidad y resistencia del granito.",
+            "Descubre la calidez y la sofisticación del granito Marrón Coco. Su paleta de colores, con tonos amarronados y pequeños granos negros, crea una armonía única. Ideal para mesadas de cocina, baños y revestimientos, este granito es más que una piedra; es una declaración de estilo y durabilidad.",
         chapa: "/assets/granito/espacios/Marron-Coco-Completa.jpg",
         puntajeRayadura: 2,
         puntajeManchas: 3,
@@ -671,12 +673,12 @@ const materials = {
     "Marrón Orcollano": {
         material: "Granitos",
         linkRetorno: "/granitos",
-        slider1: "/assets/granito/espacios/Marron-Coco-m1.jpg",
-        slider2: "/assets/granito/espacios/Marron-Coco-m2.jpeg",
-        slider3: "/assets/granito/Marron-Coco.jpg",
+        slider1: "/assets/granito/Marron-Orcollano.jpg",
+        slider2: "/assets/granito/Marron-Orcollano.jpg",
+        slider3: "/assets/granito/Marron-Orcollano.jpg",
         description:
-            "El Granito Marrón Café es una piedra natural que combina la calidez de los tonos marrones con la durabilidad y resistencia del granito.",
-        chapa: "/assets/granito/espacios/Marron-Coco-Completa.jpg",
+            "Su combinación de tonos marrones con manchas grises y negras le confiere un aspecto exquisito y único. Utilizado en encimeras de cocina, pisos y revestimientos de paredes, este granito es una elección elegante y duradera para la decoración de interiores.",
+        chapa: "/assets/granito/espacios/Marron-Orcollano-Completa.jpg",
         puntajeRayadura: 2,
         puntajeManchas: 3,
         puntajeCalor: 5,
@@ -892,6 +894,21 @@ const materials = {
         puntajeCalor: 5,
         puntajeImpacto: 4,
         puntajeUv: 5,
+    },
+    "Blanco Paloma": {
+        material: "Purastone",
+        linkRetorno: "/purastone",
+        slider1: "/assets/purastone/Blanco-Paloma.jpg",
+        slider2: "/assets/purastone/Blanco-Paloma.jpg",
+        slider3: "/assets/purastone/Blanco-Paloma.jpg",
+        description:
+            "Una opción sofisticada y versátil con un fondo blanco suave y sutiles puntos oscuros. Su consistencia monolítica del tono lo hace ideal para una variedad de aplicaciones. ",
+        chapa: "/assets/purastone/Blanco-Paloma.jpg",
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 4,
     },
 };
 

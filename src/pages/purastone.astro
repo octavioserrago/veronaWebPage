@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import GalleryMaterialsStructure from "../components/Gallery-materials-structure.astro";
+
+const cards = [
+    {
+        image: "/assets/purastone/Blanco-Paloma.jpg",
+        title: "Blanco Paloma",
+        href: "/material/Blanco Paloma",
+    },
+    {
+        image: "/assets/purastone/Blanco-Glitter.jpg",
+        title: "Blanco Glitter",
+        href: "/material/Blanco Glitter",
+    },
+    {
+        image: "/assets/purastone/Terrazo-White-r.jpg",
+        title: "Terrazo White",
+        href: "/material/Terrazo White",
+    },
+    {
+        image: "/assets/purastone/Blanco-Nube-r.jpg",
+        title: "Blanco Nube",
+        href: "/material/Blanco Nube",
+    },
+    {
+        image: "/assets/purastone/Statuarietto.jpg",
+        title: "Statuarietto",
+        href: "/material/Statuarietto",
+    },
+    {
+        image: "/assets/purastone/Blanco-Icon-r.jpg",
+        title: "Blanco Icon",
+        href: "/material/Blanco Icon",
+    },
+    {
+        image: "/assets/purastone/Crema-Pisa.jpg",
+        title: "Crema Pisa",
+        href: "/material/Crema Pisa",
+    },
+    {
+        image: "/assets/purastone/Gris-Topo.jpg",
+        title: "Gris Topo",
+        href: "/material/Gris Topo",
+    },
+    {
+        image: "/assets/purastone/Bianco-Silver.jpg",
+        title: "Bianco Silver",
+        href: "/material/Bianco Silver",
+    },
+    {
+        image: "/assets/purastone/Calacatta-Gold.jpg",
+        title: "Calacatta Gold",
+        href: "/material/Calacatta Gold",
+    },
+    {
+        image: "/assets/purastone/Greyge.jpg",
+        title: "Greyge",
+        href: "/material/Greyge",
+    },
+    {
+        image: "/assets/purastone/Gris-Zen-r.jpg",
+        title: "Gris Zen",
+        href: "/material/Gris Zen",
+    },
+    {
+        image: "/assets/purastone/Statuario-r.jpg",
+        title: "Statuario",
+        href: "/material/Statuario",
+    },
+    {
+        image: "/assets/purastone/Calacatta-Gold.jpg",
+        title: "Calacatta Gold",
+        href: "/material/Calacatta Gold",
+    },
+    {
+        image: "/assets/purastone/Basaltina-r.jpg",
+        title: "Basaltina",
+        href: "/material/Basaltina",
+    },
+    {
+        image: "/assets/purastone/Negro-Marquina.jpg",
+        title: "Negro Marquina",
+        href: "/material/Basaltina",
+    },
+    {
+        image: "/assets/purastone/Negro-Glitter.jpg",
+        title: "Negro Glitter",
+        href: "/material/Negro Glitter",
+    },
+    {
+        image: "/assets/purastone/Blue.jpg",
+        title: "Blue",
+        href: "/material/Blue",
+    },
+    {
+        image: "/assets/purastone/Sat.jpg",
+        title: "Sat",
+        href: "/material/Sat",
+    },
+    {
+        image: "/assets/purastone/Pink.jpg",
+        title: "Pink",
+        href: "/material/Pink",
+    },
+    {
+        image: "/assets/purastone/Brick.jpg",
+        title: "Brick",
+        href: "/material/Brick",
+    },
+];
+---
+
+<Layout
+    title="Purastone"
+    description="Marmolería Verona, líder en Buenos Aires en la provisión de mármoles y granitos de alta calidad. Ofrecemos una amplia gama de productos, desde granitos auténticos hasta mármoles elegantes y superficies de cuarzo premium como Silestone o Purastone. Nuestros materiales nacionales e importados realzan cualquier espacio, brindando belleza y durabilidad. Visítanos para descubrir la perfecta fusión entre belleza y resistencia."
+>
+    <main>
+        <Navbar />
+        <GalleryMaterialsStructure
+            title="Purastone"
+            body="Purastone es una superficie de cuarzo premium con características únicas: alta resistencia a rayas y manchas, fácil de limpiar y de instalar. Es de alta durabilidad. Purastone es material recomendado para mesadas de cocina, baños y uso comercial (barras, mostradores, etc)."
+            cards={cards}
+        />
+        <Footer />
+    </main>
+</Layout>
