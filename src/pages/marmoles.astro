@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import GalleryMaterialsStructure from "../components/Gallery-materials-structure.astro";
+
+const cards = [
+    {
+        image: "/assets/marmol/Blanco-Ecuador.jpg",
+        title: "Blanco Ecuador",
+        href: "/material/Blanco Ecuador",
+    },
+    {
+        image: "/assets/marmol/Blanco-Turco.jpg",
+        title: "Blanco Turco",
+        href: "/material/Blanco Turco",
+    },
+    {
+        image: "/assets/marmol/Botticino-Italiano.jpg",
+        title: "Botticcino",
+        href: "/material/Botticcino",
+    },
+    {
+        image: "/assets/marmol/Carrara-Italiano.jpg",
+        title: "Carrara",
+        href: "/material/Carrara",
+    },
+    {
+        image: "/assets/marmol/Marron-Emperador.jpg",
+        title: "Marron Emperador",
+        href: "/material/Marron Emperador",
+    },
+    {
+        image: "/assets/marmol/Negro-Marquina.jpg",
+        title: "Negro Marquina",
+        href: "/material/Negro Marquina",
+    },
+    {
+        image: "/assets/marmol/New-Beige.jpg",
+        title: "New Beige",
+        href: "/material/New Beige",
+    },
+    {
+        image: "/assets/marmol/Rosa-Portugues.jpg",
+        title: "Rosa Portugal",
+        href: "/material/Rosa Portugal",
+    },
+    {
+        image: "/assets/marmol/Travertino-Veta.jpg",
+        title: "Travertino a la Veta",
+        href: "/material/Travertino a la veta",
+    },
+    {
+        image: "/assets/marmol/Travertino-Agua.jpg",
+        title: "Travertino al Agua",
+        href: "/material/Travertino al Agua",
+    },
+    {
+        image: "/assets/marmol/Verde-Guatemala.jpg",
+        title: "Verde Guatemala",
+        href: "/material/Verde Guatemala",
+    },
+    {
+        image: "/assets/marmol/Verde-Remigiatto.png",
+        title: "Verde Remigiatto",
+        href: "/material/Verde Remigiatto",
+    },
+];
+---
+
+<Layout
+    title="Marmoles"
+    description="Marmolería Verona, líder en Buenos Aires en la provisión de mármoles y granitos de alta calidad. Ofrecemos una amplia gama de productos, desde granitos auténticos hasta mármoles elegantes y superficies de cuarzo premium como Silestone o Purastone. Nuestros materiales nacionales e importados realzan cualquier espacio, brindando belleza y durabilidad. Visítanos para descubrir la perfecta fusión entre belleza y resistencia."
+>
+    <main>
+        <Navbar />
+        <GalleryMaterialsStructure
+            title="Marmoles"
+            body="Sumérgete en un mundo de lujo y sofisticación con nuestro mármol de primera calidad, una verdadera obra maestra de la naturaleza. Desde los tonos suaves y sutiles hasta los patrones audaces y dramáticos, nuestro mármol ofrece una gama infinita de posibilidades para elevar cualquier espacio."
+            cards={cards}
+        />
+        <Footer />
+    </main>
+</Layout>
