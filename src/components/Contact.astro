@@ -252,3 +252,40 @@
         font-family: "San Francisco Display Semibold";
     }
 </style>
+
+<script>
+    document
+        .getElementById("contactForm")!
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let branch = (
+                document.getElementById("branch") as HTMLSelectElement
+            ).value;
+            let mailtoLink: string;
+
+            if (branch === "fabrica") {
+                mailtoLink = "mailto:marmoleriaverona@gmail.com";
+            } else if (branch === "local") {
+                mailtoLink = "mailto:localverona@hotmail.com";
+            } else {
+                let randomValue = Math.random();
+                mailtoLink =
+                    randomValue < 0.5
+                        ? "mailto:marmoleriaverona@gmail.com"
+                        : "mailto:localverona@hotmail.com";
+            }
+
+            let name = (document.getElementById("name") as HTMLInputElement)
+                .value;
+            let email = (document.getElementById("email") as HTMLInputElement)
+                .value;
+            let message = (
+                document.getElementById("message") as HTMLTextAreaElement
+            ).value;
+
+            mailtoLink += `?subject=Contacto desde la web&body=Nombre: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMensaje: ${encodeURIComponent(message)}`;
+
+            window.location.href = mailtoLink;
+        });
+</script>
