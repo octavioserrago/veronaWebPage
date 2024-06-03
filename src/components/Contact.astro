@@ -1,3 +1,37 @@
+---
+if (Astro.request.method === "POST") {
+    try {
+        const data = await Astro.request.formData();
+        const name = data.get("name") as string;
+        const email = data.get("email") as string;
+        const message = data.get("message") as string;
+        const branch = data.get("branch") as string;
+
+        let mailtoLink: string;
+
+        if (branch === "fabrica") {
+            mailtoLink = "mailto:marmoleriaverona@gmail.com";
+        } else if (branch === "local") {
+            mailtoLink = "mailto:localverona@hotmail.com";
+        } else {
+            const randomValue = Math.random();
+            mailtoLink =
+                randomValue < 0.5
+                    ? "mailto:marmoleriaverona@gmail.com"
+                    : "mailto:localverona@hotmail.com";
+        }
+
+        mailtoLink += `?subject=Contacto desde la web&body=Nombre: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMensaje: ${encodeURIComponent(message)}`;
+
+        window.location.href = mailtoLink;
+    } catch (error) {
+        if (error instanceof Error) {
+            console.error(error.message);
+        }
+    }
+}
+---
+
 <section class="relative pt-24 pb-36 bg-white overflow-hidden" id="contacto">
     <div class="relative z-10 container px-4 mx-auto">
         <h2 class="text-center text-4xl tracking-tight" id="titleContact">
@@ -167,7 +201,7 @@
         <div class="flex flex-col">
             <div class="flex flex-col lg:flex-row">
                 <div class="md:w-full pr-0">
-                    <form class="mx-auto max-w-lg">
+                    <form class="mx-auto max-w-lg" method="POST">
                         <div class="mb-4">
                             <label
                                 for="name"
@@ -252,40 +286,3 @@
         font-family: "San Francisco Display Semibold";
     }
 </style>
-
-<script>
-    document
-        .getElementById("contactForm")!
-        .addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            let branch = (
-                document.getElementById("branch") as HTMLSelectElement
-            ).value;
-            let mailtoLink: string;
-
-            if (branch === "fabrica") {
-                mailtoLink = "mailto:marmoleriaverona@gmail.com";
-            } else if (branch === "local") {
-                mailtoLink = "mailto:localverona@hotmail.com";
-            } else {
-                let randomValue = Math.random();
-                mailtoLink =
-                    randomValue < 0.5
-                        ? "mailto:marmoleriaverona@gmail.com"
-                        : "mailto:localverona@hotmail.com";
-            }
-
-            let name = (document.getElementById("name") as HTMLInputElement)
-                .value;
-            let email = (document.getElementById("email") as HTMLInputElement)
-                .value;
-            let message = (
-                document.getElementById("message") as HTMLTextAreaElement
-            ).value;
-
-            mailtoLink += `?subject=Contacto desde la web&body=Nombre: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMensaje: ${encodeURIComponent(message)}`;
-
-            window.location.href = mailtoLink;
-        });
-</script>
