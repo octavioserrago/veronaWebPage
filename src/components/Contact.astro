@@ -1,35 +1,5 @@
 ---
-if (Astro.request.method === "POST") {
-    try {
-        const data = await Astro.request.formData();
-        const name = data.get("name") as string;
-        const email = data.get("email") as string;
-        const message = data.get("message") as string;
-        const branch = data.get("branch") as string;
-
-        let mailtoLink: string;
-
-        if (branch === "fabrica") {
-            mailtoLink = "mailto:marmoleriaverona@gmail.com";
-        } else if (branch === "local") {
-            mailtoLink = "mailto:localverona@hotmail.com";
-        } else {
-            const randomValue = Math.random();
-            mailtoLink =
-                randomValue < 0.5
-                    ? "mailto:marmoleriaverona@gmail.com"
-                    : "mailto:localverona@hotmail.com";
-        }
-
-        mailtoLink += `?subject=Contacto desde la web&body=Nombre: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMensaje: ${encodeURIComponent(message)}`;
-
-        window.location.href = mailtoLink;
-    } catch (error) {
-        if (error instanceof Error) {
-            console.error(error.message);
-        }
-    }
-}
+let email;
 ---
 
 <section class="relative pt-24 pb-36 bg-white overflow-hidden" id="contacto">
@@ -201,7 +171,7 @@ if (Astro.request.method === "POST") {
         <div class="flex flex-col">
             <div class="flex flex-col lg:flex-row">
                 <div class="md:w-full pr-0">
-                    <form class="mx-auto max-w-lg" method="POST">
+                    <form class="mx-auto max-w-lg" method="POST" id="myForm">
                         <div class="mb-4">
                             <label
                                 for="name"
@@ -213,6 +183,7 @@ if (Astro.request.method === "POST") {
                                 id="name"
                                 name="name"
                                 class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                                required
                             />
                         </div>
                         <div class="mb-4">
@@ -226,6 +197,7 @@ if (Astro.request.method === "POST") {
                                 id="email"
                                 name="email"
                                 class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                                required
                             />
                         </div>
                         <div class="mb-4">
@@ -239,7 +211,7 @@ if (Astro.request.method === "POST") {
                                 name="message"
                                 rows="4"
                                 class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
-                            ></textarea>
+                                required></textarea>
                         </div>
 
                         <div class="mb-4">
@@ -252,6 +224,7 @@ if (Astro.request.method === "POST") {
                                 id="branch"
                                 name="branch"
                                 class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                                required
                             >
                                 <option value="random">Cualquiera</option>
                                 <option value="fabrica">Fabrica</option>
@@ -286,3 +259,73 @@ if (Astro.request.method === "POST") {
         font-family: "San Francisco Display Semibold";
     }
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("myForm") as HTMLFormElement;
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var nameInput = document.getElementById("name") as HTMLInputElement;
+            var emailInput = document.getElementById(
+                "email",
+            ) as HTMLInputElement;
+            var messageInput = document.getElementById(
+                "message",
+            ) as HTMLInputElement;
+            var branchInput = document.getElementById(
+                "branch",
+            ) as HTMLSelectElement;
+
+            var name = nameInput.value;
+            var email = emailInput.value;
+            var message = messageInput.value;
+            var branch = branchInput.value;
+
+            console.log("Nombre:", name);
+            console.log("Correo electrónico:", email);
+            console.log("Mensaje:", message);
+            console.log("Sucursal:", branch);
+
+            var recipientEmail;
+            if (branch === "fabrica") {
+                recipientEmail = "marmoleriaverona@gmail.com";
+            } else if (branch === "local") {
+                recipientEmail = "localverona@hotmail.com";
+            } else {
+                var random = Math.random();
+                recipientEmail =
+                    random < 0.5
+                        ? "marmoleriaverona@gmail.com"
+                        : "localverona@hotmail.com";
+            }
+
+            console.log("Correo electrónico del destinatario:", recipientEmail);
+
+            fetch(form.action, {
+                method: "POST",
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message,
+                    branch: branch,
+                    recipientEmail: recipientEmail,
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        console.log("Mensaje enviado exitosamente");
+                    } else {
+                        console.error("Error al enviar el mensaje");
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        });
+    });
+</script>
