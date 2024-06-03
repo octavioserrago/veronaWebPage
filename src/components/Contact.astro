@@ -1,7 +1,3 @@
----
-let email;
----
-
 <section class="relative pt-24 pb-36 bg-white overflow-hidden" id="contacto">
     <div class="relative z-10 container px-4 mx-auto">
         <h2 class="text-center text-4xl tracking-tight" id="titleContact">
@@ -171,7 +167,12 @@ let email;
         <div class="flex flex-col">
             <div class="flex flex-col lg:flex-row">
                 <div class="md:w-full pr-0">
-                    <form class="mx-auto max-w-lg" method="POST" id="myForm">
+                    <form
+                        class="mx-auto max-w-lg"
+                        method="POST"
+                        action=""
+                        id="myForm"
+                    >
                         <div class="mb-4">
                             <label
                                 for="name"
@@ -263,69 +264,29 @@ let email;
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var form = document.getElementById("myForm") as HTMLFormElement;
+        var branchSelect = document.getElementById(
+            "branch",
+        ) as HTMLSelectElement;
 
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
+        branchSelect.addEventListener("change", function () {
+            var selectedBranch = branchSelect.value;
+            var actionUrl;
 
-            var nameInput = document.getElementById("name") as HTMLInputElement;
-            var emailInput = document.getElementById(
-                "email",
-            ) as HTMLInputElement;
-            var messageInput = document.getElementById(
-                "message",
-            ) as HTMLInputElement;
-            var branchInput = document.getElementById(
-                "branch",
-            ) as HTMLSelectElement;
-
-            var name = nameInput.value;
-            var email = emailInput.value;
-            var message = messageInput.value;
-            var branch = branchInput.value;
-
-            console.log("Nombre:", name);
-            console.log("Correo electrónico:", email);
-            console.log("Mensaje:", message);
-            console.log("Sucursal:", branch);
-
-            var recipientEmail;
-            if (branch === "fabrica") {
-                recipientEmail = "marmoleriaverona@gmail.com";
-            } else if (branch === "local") {
-                recipientEmail = "localverona@hotmail.com";
+            if (selectedBranch === "fabrica") {
+                actionUrl = "https://formsubmit.co/marmoleriaverona@gmail.com";
+            } else if (selectedBranch === "local") {
+                actionUrl = "https://formsubmit.co/localverona@hotmail.com";
             } else {
                 var random = Math.random();
-                recipientEmail =
-                    random < 0.5
-                        ? "marmoleriaverona@gmail.com"
-                        : "localverona@hotmail.com";
+                if (random < 0.5) {
+                    actionUrl =
+                        "https://formsubmit.co/marmoleriaverona@gmail.com";
+                } else {
+                    actionUrl = "https://formsubmit.co/localverona@hotmail.com";
+                }
             }
 
-            console.log("Correo electrónico del destinatario:", recipientEmail);
-
-            fetch(form.action, {
-                method: "POST",
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    message: message,
-                    branch: branch,
-                    recipientEmail: recipientEmail,
-                }),
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            })
-                .then((response) => {
-                    if (response.ok) {
-                        console.log("Mensaje enviado exitosamente");
-                    } else {
-                        console.error("Error al enviar el mensaje");
-                    }
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                });
+            form.action = actionUrl;
         });
     });
 </script>
