@@ -170,8 +170,9 @@
                     <form
                         class="mx-auto max-w-lg"
                         method="POST"
-                        action=""
+                        name="contact"
                         id="myForm"
+                        data-netlify="true"
                     >
                         <div class="mb-4">
                             <label
@@ -265,34 +266,3 @@
         font-family: "San Francisco Display Semibold";
     }
 </style>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var form = document.getElementById("myForm") as HTMLFormElement;
-        var branchSelect = document.getElementById(
-            "branch",
-        ) as HTMLSelectElement;
-
-        branchSelect.addEventListener("change", function () {
-            var selectedBranch = branchSelect.value;
-            var actionUrl;
-
-            if (selectedBranch === "fabrica") {
-                actionUrl =
-                    "https://formsubmit.co/598925dc175719608d3758e9a52fef0b";
-            } else if (selectedBranch === "local") {
-                actionUrl = "https://formsubmit.co/localverona@hotmail.com";
-            } else {
-                var random = Math.random();
-                if (random < 0.5) {
-                    actionUrl =
-                        "https://formsubmit.co/598925dc175719608d3758e9a52fef0b";
-                } else {
-                    actionUrl = "https://formsubmit.co/localverona@hotmail.com";
-                }
-            }
-
-            form.action = actionUrl;
-        });
-    });
-</script>
