@@ -176,7 +176,7 @@
                         method="POST"
                         name="contact"
                         id="contact-form"
-                        action="https://formspree.io/f/xeqybpzb"
+                        action=""
                     >
                         <div class="mb-4">
                             <label
@@ -265,3 +265,30 @@
         font-family: "San Francisco Display Semibold";
     }
 </style>
+<script>
+    document.getElementById("branch").addEventListener("change", function () {
+        var form = document.getElementById("contact-form") as HTMLFormElement;
+        var selectElement = this as HTMLSelectElement;
+        var selectedBranch = selectElement.value;
+
+        switch (selectedBranch) {
+            case "fabrica":
+                form.action = "https://formspree.io/f/xoqgoylr";
+                console.log("URL seleccionada: fabrica");
+                break;
+            case "local":
+                form.action = "https://formspree.io/f/xzbnlyaa";
+                console.log("URL seleccionada: local");
+                break;
+            default:
+                form.action =
+                    Math.random() < 0.5
+                        ? "https://formspree.io/f/xoqgoylr"
+                        : "https://formspree.io/f/xzbnlyaa";
+                console.log("URL seleccionada (random): " + form.action);
+                break;
+        }
+    });
+
+    document.getElementById("branch").dispatchEvent(new Event("change"));
+</script>
