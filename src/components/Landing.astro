@@ -1,45 +1,85 @@
-<div class="Landing w-dvw h-screen flex flex-col items-center">
-    <h1
-        class="text-3xl mt-8 md:text-5xl lg:text-6xl text-white text-center md:mt-8 lg:mt-8 xl:mt-20 font-bold"
-        id="mainTitle"
+<div
+    class="Landing w-dvw h-3/4 screen flex flex-col md:flex-row items-center justify-center bg-black"
+>
+    <div
+        class="contenedorTexto w-full md:w-1/2 flex flex-col justify-center items-center h-full p-4 text-center md:text-left"
     >
-        MARMOLERÍA VERONA
-    </h1>
-    <p
-        class="subtitle text-center text-white font-normal text-base md:text-3xl lg:text-3xl xl:mt-4"
+        <h1 class="text-white text-5xl font-bold title">Marmolería Verona</h1>
+        <div class="subtitulo-container text-center">
+            <p class="text-white text-md mt-2 font-semibold">
+                Bienvenido a nuestro mundo de Mármol
+            </p>
+            <p class="text-white text-md mt-1 font-semibold">
+                Renova tu espacio con nosotros
+            </p>
+        </div>
+        <a id="wppButton">
+            <button
+                class="mt-4 px-4 py-2 rounded-full border border-yellow-400 text-yellow-400 bg-black hover:bg-yellow-500 hover:text-white transition duration-150 ease-in-out"
+            >
+                Contáctanos
+            </button>
+        </a>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>¿A qué sede te gustaría contactar por Whats App?</h2>
+                <button id="fabricaButton" class="modal-button">Fábrica</button>
+                <button id="localButton" class="modal-button">Local</button>
+                <button id="azarButton" class="modal-button">Al azar</button>
+            </div>
+        </div>
+    </div>
+    <div
+        class="contenedorVideo w-full md:w-1/2 flex justify-center md:justify-end relative"
     >
-        Transformando espacios, dando vida a tus proyectos
-    </p>
-    <a id="wppButton"
-        ><button
-            class="mt-4 px-4 py-2 rounded-full border border-yellow-400 text-yellow-400 bg-black hover:bg-yellow-500 hover:text-white transition-colors duration-50 ease-in-out"
-        >
-            Contáctanos
-        </button></a
-    >
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <h2>¿A qué sede te gustaría contactar por Whats App?</h2>
-            <button id="fabricaButton" class="modal-button">Fábrica</button>
-            <button id="localButton" class="modal-button">Local</button>
-            <button id="azarButton" class="modal-button">Al azar</button>
+        <div class="videoWrapper absolute inset-0 overflow-hidden">
+            <video class="w-full h-full" autoplay loop muted playsinline>
+                <source src="/assets/marble-world.mp4" type="video/mp4" />
+            </video>
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"
+            >
+            </div>
+            <div
+                class="absolute inset-0 bg-gradient-to-l from-black via-transparent to-black"
+            >
+            </div>
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"
+            >
+            </div>
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"
+            >
+            </div>
         </div>
     </div>
 </div>
 
 <style>
-    .subtitle {
-        font-family: "San Francisco Display Ultralight";
+    .title {
+        background: linear-gradient(45deg, #ffd700, #ffaf00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-    #mainTitle {
-        font-family: "San Francisco Display Semibold";
+
+    .videoWrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
-    .Landing {
-        background-image: url("/assets/Landing01.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+
+    video {
+        width: 100%;
+        height: 100%;
+        mask-image: radial-gradient(
+            circle,
+            rgba(0, 0, 0, 1) 60%,
+            rgba(0, 0, 0, 0) 100%
+        );
     }
+
     .modal {
         display: none;
         position: fixed;
