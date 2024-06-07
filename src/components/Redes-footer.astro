@@ -39,7 +39,7 @@
         </svg>
     </a>
 
-    <a id="wppButton">
+    <a id="wppButtonFooter">
         <svg
             class="w-6 h-6 hover:text-gray-500 duration-150 cursor-pointer"
             aria-hidden="true"
@@ -64,6 +64,7 @@
 
 <div id="modal" class="modal">
     <div class="modal-content">
+        <span class="close-button">&times;</span>
         <h2>¿A qué sede te gustaría contactar por Whats App?</h2>
         <button id="fabricaButton" class="modal-button">Fábrica</button>
         <button id="localButton" class="modal-button">Local</button>
@@ -73,7 +74,7 @@
 
 <script>
     document
-        .getElementById("wppButton")
+        .getElementById("wppButtonFooter")
         .addEventListener("click", function (event) {
             event.preventDefault();
             document.getElementById("modal").style.display = "flex";
@@ -150,5 +151,19 @@
     }
     .modal-button:hover {
         background-color: #e39700;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    .close-button:hover {
+        color: #ff0000;
     }
 </style>

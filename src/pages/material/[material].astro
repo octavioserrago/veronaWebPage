@@ -29,6 +29,7 @@ export function getStaticPaths() {
         { params: { material: "Lime Delight" } },
         { params: { material: "Miami Vena" } },
         { params: { material: "Miami White" } },
+        { params: { material: "Lyra" } },
         { params: { material: "Negro Stellar" } },
         { params: { material: "Negro Tebas" } },
         { params: { material: "Niebla" } },
@@ -115,7 +116,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 2,
         puntajeImpacto: 4,
-        puntajeUv: 2,
+        puntajeUv: 3,
     },
     "Arcilla Red": {
         material: "Silestone",
@@ -130,7 +131,7 @@ const materials = {
         puntajeManchas: 3,
         puntajeCalor: 2,
         puntajeImpacto: 4,
-        puntajeUv: 2,
+        puntajeUv: 3,
     },
     "Blanco Norte": {
         material: "Silestone",
@@ -205,7 +206,7 @@ const materials = {
         puntajeManchas: 3,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 2,
+        puntajeUv: 3,
     },
     "Cala Blue": {
         material: "Silestone",
@@ -290,7 +291,7 @@ const materials = {
         slider3: "/assets/silestone/Silestone-ethereal-dusk.jpg",
         description:
             "El tono azulado en el interior de cada una de sus vetas le aporta un toque moderno que, sumado a su vanguardista direccionalidad geométrica, hace de Ethereal Dusk uno de los diseños más urbanos y actuales de la colección.",
-        chapa: "/assets/silestone/chapas-completas/",
+        chapa: "/assets/silestone/chapas-completas/et-dusk-completa.avif",
         puntajeRayadura: 3,
         puntajeManchas: 3,
         puntajeCalor: 3,
@@ -387,6 +388,21 @@ const materials = {
         puntajeImpacto: 4,
         puntajeUv: 3,
     },
+    Lyra: {
+        material: "Silestone",
+        linkRetorno: "/silestone",
+        slider1: "/assets/silestone/espacios/Lyra.avif",
+        slider2: "/assets/silestone/espacios/Lyra-m1.avif",
+        slider3: "/assets/silestone/espacios/Lyra.avif",
+        description:
+            "Una amplia gama cromática de grises, marrones y beige sobre un fondo blanco que ofrece versatilidad y abre un mundo de posibilidades para este tono lunar.",
+        chapa: "/assets/silestone/chapas-completas/Lyra-Completa.avif",
+        puntajeRayadura: 2,
+        puntajeManchas: 3,
+        puntajeCalor: 3,
+        puntajeImpacto: 4,
+        puntajeUv: 3,
+    },
     "Negro Stellar": {
         material: "Silestone",
         linkRetorno: "/silestone",
@@ -471,8 +487,8 @@ const materials = {
         description:
             "Con un aspecto de piedra caliza blanca y cubierto con sutiles vetas grises, crea un impresionante efecto de grietas. Este modelo combina perfectamente con una cocina clásica ó rural y aquellas que pretenden recrear un leve sentido de la tradición.",
         chapa: "/assets/silestone/chapas-completas/pearl-jasmine-completa.avif",
-        puntajeRayadura: 3,
-        puntajeManchas: 3,
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
         puntajeUv: 3,
@@ -486,7 +502,7 @@ const materials = {
         description:
             "Un verde sereno, lleno de luz que ilumina con elegancia los espacios y ofrece armonía a cualquier estancia.",
         chapa: "/assets/silestone/chapas-completas/posidonia-green-completa.avif",
-        puntajeRayadura: 2,
+        puntajeRayadura: 3,
         puntajeManchas: 3,
         puntajeCalor: 2,
         puntajeImpacto: 4,
@@ -517,7 +533,7 @@ const materials = {
             "Su intensidad y diseño aportarán a cualquier ambiente toda la fuerza y viveza para convertirse en un lugar mágico y acogedor.",
         chapa: "/assets/silestone/chapas-completas/rogui-completa.avif",
         puntajeRayadura: 3,
-        puntajeManchas: 3,
+        puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
         puntajeUv: 3,
@@ -531,7 +547,7 @@ const materials = {
         description:
             "Suave y sutil jaspeado bicolor en el fondo con efectos degradados y gran profundidad. El tono frío del fondo se mezcla con sus vetas plateadas y grises oscuras para crear un color elegante que encaja a la perfección con tonos cálidos y fríos. Victorian Silver encarna el encanto de la historia. Sumérjete en el mundo victoriano de la elegancia y la sofisticación, donde cada momento es un tesoro atemporal.",
         chapa: "/assets/silestone/chapas-completas/victorian-silver-completa.avif",
-        puntajeRayadura: 2,
+        puntajeRayadura: 3,
         puntajeManchas: 3,
         puntajeCalor: 2,
         puntajeImpacto: 4,
@@ -550,7 +566,7 @@ const materials = {
         puntajeManchas: 2,
         puntajeCalor: 5,
         puntajeImpacto: 3,
-        puntajeUv: 4,
+        puntajeUv: 5,
     },
     "Azul Labrador": {
         material: "Granitos",
@@ -576,8 +592,8 @@ const materials = {
         description:
             "El Granito Blanco Brasil, tesoro de las tierras brasileñas, cautiva con su base blanca adornada con cristales definidos y pinceladas de tonos oscuros, incluyendo manchas purpúreas que añaden un toque de misterio y sofisticación. Versátil y elegante, transforma cualquier espacio con su belleza atemporal y encanto sutil pero inolvidable.",
         chapa: "/assets/granito/espacios/Blanco-Brasil-Completa.jpg",
-        puntajeRayadura: 3,
-        puntajeManchas: 2,
+        puntajeRayadura: 4,
+        puntajeManchas: 3,
         puntajeCalor: 5,
         puntajeImpacto: 3,
         puntajeUv: 4,
@@ -591,8 +607,8 @@ const materials = {
         description:
             "Blanco Siena es una opción popular para encimeras de cocina gracias a su color claro y versatilidad. Con un fondo blanquecino salpicado de pequeñas manchas rosadas o grises, cada losa ofrece un aspecto único. Originario de la región brasileña de Itaúnas, este granito combina fácilmente con muebles blancos y de madera, aportando luminosidad y elegancia a cualquier espacio. Su durabilidad y fácil mantenimiento lo convierten en una elección atemporal para cualquier cocina.",
         chapa: "/assets/granito/espacios/Blanco-Siena-Completa.jpg",
-        puntajeRayadura: 3,
-        puntajeManchas: 2,
+        puntajeRayadura: 4,
+        puntajeManchas: 3,
         puntajeCalor: 5,
         puntajeImpacto: 3,
         puntajeUv: 3,
@@ -606,11 +622,11 @@ const materials = {
         description:
             "El Granito Delicatus, originario de Brasil, se destaca por su base blanca pura adornada con vetas oscuras contrastantes. Este granito es sinónimo de estilo y elegancia, ideal para quienes buscan transformar sus espacios en auténticas obras maestras. Reconocido por su durabilidad y facilidad de mantenimiento, Delicatus es perfecto para encimeras de cocina, pisos, salpicaderos sofisticados y paredes decorativas impactantes. Tanto en hogares como en propiedades comerciales, este granito no solo añade valor estético, sino también funcionalidad y practicidad, convirtiéndose en la elección perfecta para proyectos de diseño de alta gama.",
         chapa: "/assets/granito/espacios/Delicatus-Completa.jpg",
-        puntajeRayadura: 3,
-        puntajeManchas: 2,
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 3,
-        puntajeUv: 3,
+        puntajeUv: 5,
     },
     "Gris Mara": {
         material: "Granitos",
@@ -625,7 +641,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 5,
     },
     "Gris Perla Salmón": {
         material: "Granitos",
@@ -666,7 +682,7 @@ const materials = {
         description:
             "Este granito es una exquisita combinación de marrones y negros con pequeñas manchas de gris claro bronceado. Su apariencia cambia desde tonos sepia negros hasta oscuros, lo que le otorga una belleza única y una sensación de profundidad.",
         chapa: "/assets/granito/espacios/Marron-Absoluto-Completa.jpg",
-        puntajeRayadura: 4,
+        puntajeRayadura: 3,
         puntajeManchas: 3,
         puntajeCalor: 5,
         puntajeImpacto: 4,
@@ -696,11 +712,11 @@ const materials = {
         description:
             "Descubre la calidez y la sofisticación del granito Marrón Coco. Su paleta de colores, con tonos amarronados y pequeños granos negros, crea una armonía única. Ideal para mesadas de cocina, baños y revestimientos, este granito es más que una piedra; es una declaración de estilo y durabilidad.",
         chapa: "/assets/granito/espacios/Marron-Coco-Completa.jpg",
-        puntajeRayadura: 2,
-        puntajeManchas: 3,
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 5,
     },
     "Marrón Orcollano": {
         material: "Granitos",
@@ -711,11 +727,11 @@ const materials = {
         description:
             "Su combinación de tonos marrones con manchas grises y negras le confiere un aspecto exquisito y único. Utilizado en encimeras de cocina, pisos y revestimientos de paredes, este granito es una elección elegante y duradera para la decoración de interiores.",
         chapa: "/assets/granito/espacios/Marron-Orcollano-Completa.jpg",
-        puntajeRayadura: 2,
-        puntajeManchas: 3,
+        puntajeRayadura: 4,
+        puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 5,
     },
     "Negro Boreal Dorado": {
         material: "Granitos",
@@ -730,7 +746,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 5,
     },
     "Negro Boreal": {
         material: "Granitos",
@@ -745,7 +761,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 5,
     },
     "Negro Brasil": {
         material: "Granitos",
@@ -760,7 +776,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 5,
     },
     "Negro Zulú": {
         material: "Granitos",
@@ -775,7 +791,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 5,
     },
     "Rojo Dragón": {
         material: "Granitos",
@@ -790,7 +806,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 5,
     },
     "Rojo Multicolor": {
         material: "Granitos",
@@ -804,8 +820,8 @@ const materials = {
         puntajeRayadura: 4,
         puntajeManchas: 4,
         puntajeCalor: 5,
-        puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeImpacto: 3,
+        puntajeUv: 5,
     },
     "Rosa del Salto": {
         material: "Granitos",
@@ -877,9 +893,9 @@ const materials = {
             "El granito Verde Butterfly es una piedra natural de origen ígneo que se caracteriza por su tonalidad verde oscuro con vetas blancas y negras que le dan un aspecto similar a las alas de una mariposa.",
         chapa: "/assets/granito/espacios/Verde-Butterfly-Completa.jpeg",
         puntajeRayadura: 4,
-        puntajeManchas: 5,
+        puntajeManchas: 4,
         puntajeCalor: 5,
-        puntajeImpacto: 4,
+        puntajeImpacto: 3,
         puntajeUv: 5,
     },
     "Verde San Francisco": {
@@ -892,7 +908,7 @@ const materials = {
             "Descubre la elegancia del granito Verde San Francisco, una piedra natural brasileña que combina tonos verdes profundos con vetas negras y blancas. Ideal para encimeras, revestimientos y aplicaciones exteriores, este granito ofrece una durabilidad excepcional y una estética sofisticada. Perfecto para añadir un toque de lujo y resistencia a cualquier proyecto de diseño.",
         chapa: "/assets/granito/espacios/Verde-San-Francisco-Completa.jpg",
         puntajeRayadura: 4,
-        puntajeManchas: 5,
+        puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 4,
         puntajeUv: 5,
@@ -907,7 +923,7 @@ const materials = {
             "El granito Verde Ubatuba de elegante y exótica apariencia, es de color verde oscuro con pequeñas motas de blanco, y marrón. Originario de Brasil, es muy popular para encimeras de cocina, pisos y paredes debido a su durabilidad, resistencia a las manchas y al calor.",
         chapa: "/assets/granito/espacios/Verde-Ubatuba-Completa.jpg",
         puntajeRayadura: 4,
-        puntajeManchas: 5,
+        puntajeManchas: 4,
         puntajeCalor: 5,
         puntajeImpacto: 4,
         puntajeUv: 5,
@@ -940,7 +956,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Blanco Glitter": {
         material: "Purastone",
@@ -955,7 +971,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Terrazo White": {
         material: "Purastone",
@@ -970,7 +986,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Blanco Nube": {
         material: "Purastone",
@@ -985,7 +1001,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     Statuarietto: {
         material: "Purastone",
@@ -1000,7 +1016,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Blanco Icon": {
         material: "Purastone",
@@ -1015,7 +1031,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Crema Pisa": {
         material: "Purastone",
@@ -1030,7 +1046,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Gris Topo": {
         material: "Purastone",
@@ -1041,11 +1057,11 @@ const materials = {
         description:
             "Gris Topo es un tono suave y elegante que combina matices grises y beige. Su apariencia natural y atemporal lo hace ideal para cualquier estilo de decoración",
         chapa: "/assets/purastone/Gris-Topo.jpg",
-        puntajeRayadura: 4,
+        puntajeRayadura: 3,
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Bianco Silver": {
         material: "Purastone",
@@ -1060,7 +1076,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Calacatta-Gold": {
         material: "Purastone",
@@ -1075,7 +1091,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     Greyge: {
         material: "Purastone",
@@ -1086,11 +1102,11 @@ const materials = {
         description:
             "El Greyge combina matices grises en una tonalidad cálida y versátil. Su patrón sutilmente granulado evoca la serenidad de arenas suaves bajo un cielo nublado. Esta fusión de colores terrosos y la delicadeza de su textura lo convierten en una elección elegante para cualquier espacio que busque transmitir tranquilidad y sofisticación natural.",
         chapa: "/assets/purastone/Greyge.jpg",
-        puntajeRayadura: 4,
+        puntajeRayadura: 3,
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Gris Zen": {
         material: "Purastone",
@@ -1101,11 +1117,11 @@ const materials = {
         description:
             "Gris Zen posee una tonalidad suave y uniforme que evoca la serenidad de un cielo nublado en un día tranquilo. El patrón sutil, sin grandes variaciones, recuerda a la textura lisa de las piedras pulidas por el tiempo en un río calmo. Es como tener la naturaleza en tus manos, ofreciendo una sensación de equilibrio y estabilidad perfecta para crear ambientes con elegancia",
         chapa: "/assets/purastone/Gris-Zen.jpg",
-        puntajeRayadura: 4,
+        puntajeRayadura: 3,
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     Statuario: {
         material: "Purastone",
@@ -1120,7 +1136,7 @@ const materials = {
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     Basaltina: {
         material: "Purastone",
@@ -1131,11 +1147,11 @@ const materials = {
         description:
             "Basaltina presenta un tono gris claro con una textura sutil y uniforme, ideal para un look contemporáneo y sobrio.",
         chapa: "/assets/purastone/Basaltina.jpg",
-        puntajeRayadura: 4,
+        puntajeRayadura: 3,
         puntajeManchas: 4,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Negro Marquina Purastone": {
         material: "Purastone",
@@ -1146,11 +1162,11 @@ const materials = {
         description:
             "Negro Marquina es un cuarzo suave y combina perfectamente con cualquier tipo de ambientes, ya sean los más elegantes o los más sencillos. Sus vetas blancas irregulares crean un contraste cautivador con el resto del color sólido.",
         chapa: "/assets/purastone/Negro-Marquina.jpg",
-        puntajeRayadura: 4,
+        puntajeRayadura: 3,
         puntajeManchas: 4,
-        puntajeCalor: 3,
+        puntajeCalor: 2,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Negro Glitter": {
         material: "Purastone",
@@ -1161,11 +1177,11 @@ const materials = {
         description:
             "Negro Glitter es una elección audaz y sofisticada para tus espacios. Imagina una noche estrellada en la que los destellos de luz se reflejan en una superficie oscura y misteriosa. Así es el Negro Glitter de Purastone. Su base negra o gris muy oscuro está salpicada de partículas brillantes que capturan la luz de manera cautivadora. Es como tener un pedacito del cielo nocturno en tu hogar, añadiendo un toque de elegancia y glamour.",
         chapa: "/assets/purastone/Negro-Glitter.jpg",
-        puntajeRayadura: 4,
+        puntajeRayadura: 3,
         puntajeManchas: 4,
-        puntajeCalor: 3,
+        puntajeCalor: 2,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     Blue: {
         material: "Purastone",
@@ -1176,11 +1192,11 @@ const materials = {
         description:
             "Blue de Purastone presenta una tonalidad profunda y uniforme que recuerda al vasto océano en una noche sin luna. Su superficie lisa con sutiles variaciones de tono evoca la tranquilidad de las aguas marinas, ideal para ambientes que buscan serenidad y elegancia. Este azul es perfecto para añadir un toque de sofisticación natural a cualquier espacio.",
         chapa: "/assets/purastone/Blue.jpg",
-        puntajeRayadura: 4,
-        puntajeManchas: 4,
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     Sat: {
         material: "Purastone",
@@ -1191,11 +1207,11 @@ const materials = {
         description:
             "Este tono verde profundo y uniforme evoca la densidad y serenidad de un bosque antiguo en penumbra. Su superficie lisa y suave sugiere la tranquilidad de las hojas perennes, ofreciendo una sensación de estabilidad y naturalidad que complementaría cualquier espacio con elegancia atemporal. Imagina un rincón donde la frescura de la naturaleza se funde con la sofisticación. Eso es lo que representa el Sat de Purastone.",
         chapa: "/assets/purastone/Sat.jpg",
-        puntajeRayadura: 4,
-        puntajeManchas: 4,
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     Pink: {
         material: "Purastone",
@@ -1206,11 +1222,11 @@ const materials = {
         description:
             "Pink tiene un tono suave y uniforme evoca la delicadeza de los pétalos de una rosa en plena primavera. Su superficie lisa y sin variaciones brinda una sensación de calma y elegancia, ideal para crear ambientes con un toque sutil de calidez natural.",
         chapa: "/assets/purastone/Pink.jpg",
-        puntajeRayadura: 4,
-        puntajeManchas: 4,
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     Brick: {
         material: "Purastone",
@@ -1221,11 +1237,11 @@ const materials = {
         description:
             "Brick es una cálida y rica tonalidad que evoca la esencia de ladrillos antiguos y la calidez del hogar. Ideal para espacios que buscan una sensación acogedora y un toque de nostalgia.",
         chapa: "/assets/purastone/Brick.jpg",
-        puntajeRayadura: 4,
-        puntajeManchas: 4,
+        puntajeRayadura: 3,
+        puntajeManchas: 3,
         puntajeCalor: 3,
         puntajeImpacto: 4,
-        puntajeUv: 4,
+        puntajeUv: 3,
     },
     "Blanco Ecuador": {
         material: "Marmoles",
