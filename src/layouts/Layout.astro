@@ -7,6 +7,7 @@ interface Props {
 const { title, description } = Astro.props;
 
 import Icon from "/public/assets/verona-Logo-color.png";
+import initFacebookPixel from "../components/MetaPixel";
 ---
 
 <!doctype html>
@@ -35,6 +36,13 @@ import Icon from "/public/assets/verona-Logo-color.png";
 			rel="stylesheet"
 		/>
 		<title>{title}</title>
+		<script>
+			import initFacebookPixel from "../components/MetaPixel";
+
+			{
+				initFacebookPixel;
+			}
+		</script>
 	</head>
 	<body>
 		<slot />
